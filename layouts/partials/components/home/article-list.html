@@ -1,45 +1,23 @@
 <ul class="article-list">
     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
-        {{ if or $paginator.HasPrev $paginator.HasNext }}
-            {{ if $paginator.HasPrev }}
-                <div class="single-left">
-                    <div class="index-div-prev">
-                        <h4>上一页</h4>
-                        <p>
-                            <a href="{{ $paginator.Prev.URL }}" rel="prev">上一页</a>
-                        </p>
-                    </div>
-                </div>
-            {{ end }}
-            {{ if $paginator.HasNext }}
-                <div class="single-left">
-                    <div class="index-div-next">
-                        <h4>下一页</h4>
-                        <p>
-                            <a href="{{ $paginator.Next.URL }}" rel="next">下一页</a>
-                        </p>
-                    </div>
-                </div>
-            {{ end }}
-        {{ end }}
-        {{ range $paginator.Pages }}
-            <li class="article-list-item reveal index-post-list ">
-                <div class="article-list-img-else">
-                    {{ if (.Params.thumbnail) }}
-                        <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
-                    {{ end }}
-                    <div class="article-list-img-right">
-                        <div>
-                            <a href="{{ .Permalink  }}" class="" style="text-decoration: none;">
-                                <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
-                            </a>
-                            <p>{{ .Summary }}...</p>
-                            <div class="article-list-footer">
-                                <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
-                            </div>
+    {{ range $paginator.Pages }}
+        <li class="article-list-item reveal index-post-list ">
+            <div class="article-list-img-else">
+                {{ if (.Params.thumbnail) }}
+                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
+                {{ end }}
+                <div class="article-list-img-right">
+                    <div>
+                        <a href="{{ .Permalink  }}" class="" style="text-decoration: none;">
+                            <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
+                        </a>
+                        <p>{{ .Summary }}...</p>
+                        <div class="article-list-footer">
+                            <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
                         </div>
                     </div>
                 </div>
-            </li>
+            </div>
+        </li>
     {{ end }}
 </ul>
