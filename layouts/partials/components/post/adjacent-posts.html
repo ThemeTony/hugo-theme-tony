@@ -1,0 +1,26 @@
+{{ .Scratch.Set "prev" .PrevPage }}
+{{ .Scratch.Set "next" .NextPage }}
+{{ $prev := .Scratch.Get "prev" }}
+{{ $next := .Scratch.Get "next" }}
+{{ if or $prev $next }}
+    {{ if $next }}
+        <div>
+            <div class="index-div-next">
+                <h4>上一篇</h4>
+                <p>
+                    <a href="{{ $next.RelPermalink }}" rel="next">{{ printf `%s` $next.LinkTitle | safeHTML }}</a>
+                </p>
+            </div>
+        </div>
+    {{ end }}
+    {{ if $prev }}
+        <div>
+            <div class="index-div-prev">
+                <h4>下一篇</h4>
+                <p>
+                    <a href="{{ $prev.RelPermalink }}" rel="prev">{{ printf `%s` $prev.LinkTitle | safeHTML }}</a>
+                </p>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}

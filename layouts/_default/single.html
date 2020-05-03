@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-{{ partial "head.html" . }}
-
-<body>
-    {{ partial "header.html" . }}
-    <div id="post-container">
-        <div class="grid grid-centered">
-            <div id="grid-cell" class="grid-cell">
-                <article class="article reveal">
-                    <div id="load">
-                        <div class="article-header">
-                            <!--
-                            <span class="badge badge-pill badge-danger single-badge">
-                                <a href="https://www.ouorz.com/" class="nuxt-link-active" style="text-decoration: none;">
-                                    <i class="ri-article-line"></i>博客文章
-                                </a>
-                            </span>
-                                
-                            <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
-                                <a href="https://www.ouorz.com/cate/7" class="post-header">研究学习</a>
-                            </span>-->
-                            <span title="预计阅读时长" class="badge badge-pill badge-danger single-badge post-header">
-                                {{ .ReadingTime }} mins
-                            </span>
-                            <h2 class="single-h2">{{ .Title }}</h2>
-                            <div class="article-list-footer">
-                                <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
-                                <span class="article-list-divider">/</span>
-                                <span class="article-list-minutes">{{ .WordCount }} Words</span></div>
-                            </div>
-                            <div class="article-content">
-                                {{.Content}}
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <header id="header-div" class="tony-header-scoll">
+        {{ partial "header.html" . }}
+    </header>
+    <body>
+        
+        <div id="post-container">
+            <div class="grid grid-centered">
+                <div id="grid-cell" class="grid-cell">
+                    <div class="single-left">
+                        {{ partial "components/post/adjacent-posts.html" . }}
+                    </div>
+                    <article class="article reveal">
+                        <div id="load">
+                            <div class="article-header">
+                                <!--
+                                <span class="badge badge-pill badge-danger single-badge">
+                                    <a href="https://www.ouorz.com/" class="nuxt-link-active" style="text-decoration: none;">
+                                        <i class="ri-article-line"></i>博客文章
+                                    </a>
+                                </span>   
+                                <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
+                                    <a href="https://www.ouorz.com/cate/7" class="post-header">研究学习</a>
+                                </span>-->
+                                {{ partial "components/post/header.html" . }}
+                                <div class="article-content">
+                                    {{.Content}}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>

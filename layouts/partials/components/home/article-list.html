@@ -1,0 +1,41 @@
+<ul class="article-list">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+        {{ range $paginator.Pages }}
+            <li class="article-list-item reveal index-post-list ">
+                <div class="article-list-img-else">
+                    {{ if (.Params.thumbnail) }}
+                        <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
+                    {{ end }}
+                    <div class="article-list-img-right">
+                        <div>
+                            <a href="{{ .Permalink  }}" class="" style="text-decoration: none;">
+                                <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
+                            </a>
+                            <p>{{ .Summary }}...</p>
+                            <div class="article-list-footer">
+                                <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+    {{ end }}
+    {{ if or $paginator.HasPrev $paginator.HasNext }}
+        <div>
+        {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" rel="prev">
+                    <button type="button" class="btn btn-light prev">上一页</button>
+            </a>
+        {{ else }}
+            <button type="button" class="btn btn-light prev">无上一页</button>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" rel="next">
+                <button type="button" class="btn btn-light next">下一页</button>
+            </a>
+			{{ else }}
+				<button type="button" class="btn btn-light next">无下一页</button>
+            {{ end }}
+        </div>
+    {{ end }}
+</ul>
