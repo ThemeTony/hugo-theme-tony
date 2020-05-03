@@ -5,7 +5,7 @@
 {{ if or $prev $next }}
     {{ if $next }}
         <div>
-            <div class="index-div-next">
+            <div class="index-div">
                 <h4>上一篇</h4>
                 <p>
                     <a href="{{ $next.RelPermalink }}" rel="next">{{ printf `%s` $next.LinkTitle | safeHTML }}</a>
@@ -15,7 +15,7 @@
     {{ end }}
     {{ if $prev }}
         <div>
-            <div class="index-div-prev">
+            <div class="index-div">
                 <h4>下一篇</h4>
                 <p>
                     <a href="{{ $prev.RelPermalink }}" rel="prev">{{ printf `%s` $prev.LinkTitle | safeHTML }}</a>
