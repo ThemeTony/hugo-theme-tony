@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <header id="header-div" class="tony-header-scoll">
-        {{ partial "header.html" . }}
-    </header>
+    {{ partial "head.html" . }}
+
+    {{ partial "header.html" . }}
     <body>
         <div id="index">
             <div class="grid grid-centered" style="max-width: 660px; padding: 0px 20px; margin-top: 80px;">
@@ -17,7 +14,5 @@
             </div>
         </div>
     </body>
-    <footer>
-        {{ partial "footer.html" . }}
-    </footer>
+    {{ partial "footer.html" . }}
 </html>

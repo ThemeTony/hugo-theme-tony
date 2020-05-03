@@ -3861,9 +3861,3 @@ input:focus {
 	background: #3797fe!important;
 	z-index: 9999
 }
-
-.prev, .next {
-    width: 50%;
-    background: #fff;
-    float: left;
-}
