@@ -24,7 +24,7 @@ summaryLength = 235
     # 座右铭或简介
     motto = "夜晚再黑，也压不过雪的白。"
     # 头像
-    avatar = "/images/t.jpg"
+    avatar = "./images/t.jpg"
     # 网站（默认值：baseURL）
     website = "https://www.raycoder.me/"
 
@@ -78,4 +78,4 @@ summaryLength = 235
     # 站点信息
 
     # 站点的 LOGO
-    siteLogo = "/images/t.jpg"
+    siteLogo = "./images/t.jpg"
