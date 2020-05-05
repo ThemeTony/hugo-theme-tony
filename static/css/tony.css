@@ -1104,7 +1104,7 @@ img {
 .article-list {
 	display: block;
 	padding: 0 10px;
-	margin: 10px 0 60px;
+	margin: 10px 0;
 	list-style: none
 }
 
@@ -3862,8 +3862,21 @@ input:focus {
 	z-index: 9999
 }
 
-.prev, .next {
-    width: 50%;
-    background: #fff;
-    float: left;
+#home-prev-page-div {
+	width: 50%;
+	padding: 0 30px 30px 30px!important;
+	float: left;
 }
+
+#home-next-page-div {
+	width: 50%;
+	padding: 0 30px 30px 30px!important;
+	float: right;
+}
+
+#home-prev-page-div button, #home-next-page-div button {
+	width: 90%;
+	margin: 0 auto;
+	background: #fff;
+}
+

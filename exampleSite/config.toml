@@ -1,0 +1,81 @@
+##########################################
+# 站点配置
+
+baseURL = "https://www.raycoder.me/"
+title = "Ray's Blog"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+
+# 主题选择
+theme = "tony"
+
+# `hugo new` 新建文章自动打开的文本编辑器
+newContentEditor = "D:/Typora/Typora.exe"
+
+# 摘要的字数限制
+summaryLength = 235
+
+# 作者信息
+[author]
+    # 名字
+    name = "Ray"
+    # 邮箱
+    email = "ray@raycoder.me"
+    # 座右铭或简介
+    motto = "夜晚再黑，也压不过雪的白。"
+    # 头像
+    avatar = "/images/t.jpg"
+    # 网站（默认值：baseURL）
+    website = "https://www.raycoder.me/"
+
+[menu]
+    # 菜单栏
+    [[menu.main]]
+        url = "/"
+        name = "首页"
+        weight = 1
+    [[menu.main]]
+        url = "/about/"
+        name = "关于"
+        weight = 2
+
+# Markdown 渲染器
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = false
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        lineNos = true
+        lineNumbersInTable = true
+        noClasses = true
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = true
+
+##########################################
+# 主题配置
+
+[params]
+    ######################################
+    # 站点信息
+
+    # 站点的 LOGO
+    siteLogo = "/images/t.jpg"

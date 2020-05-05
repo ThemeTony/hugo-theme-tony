@@ -8,30 +8,13 @@
             <div class="grid grid-centered" style="max-width: 660px; padding: 0px 20px; margin-top: 80px;">
                 <div id="grid-cell" class="grid-cell">
                     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
-                    {{ if or $paginator.HasPrev $paginator.HasNext }}
-                        <div class="single-left">
-                            {{ if $paginator.HasPrev }}
-                                <div class="index-div">
-                                    <a href="{{ $paginator.Prev.URL }}" rel="prev">
-                                        <h4>上一页</h4>
-                                        <p>上一页</p>
-                                    </a>
-                                </div>
-                            {{ end }}
-                            {{ if $paginator.HasNext }}
-                                <div class="index-div">
-                                    <a href="{{ $paginator.Next.URL }}" rel="next">
-                                        <h4>下一页</h4>
-                                        <p>下一页</p>
-                                    </a>
-                                </div>
-                            {{ end }}
-                        </div>
-                    {{ end }}
-
+                    
                     {{ partial "components/home/header-info.html" . }}
 
                     {{ partial "components/home/article-list.html" . }}
+                    
+                    {{ partial "components/home/adjacent-pages.html" (dict "paginator" $paginator) }}
+                    
                 </div>
             </div>
         </div>
