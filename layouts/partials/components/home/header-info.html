@@ -1,6 +1,6 @@
 <div id="header_info" class="index-top">
     <nav class="header-nav reveal">
-        <img src="{{ .Site.BaseURL }}{{ $.Site.Author.avatar }}" class="header-avatar-top">
+        <img src="{{ $.Site.Author.avatar | relURL }}" class="header-avatar-top">
             <a href="/" title="TonyHe" class="header-logo" style="text-decoration: none;">{{ $.Site.Author.name }}</a>
             <p class="lead" style="margin-top: 0px; margin-left: 5px;">{{ $.Site.Author.motto }}</p>
     </nav>

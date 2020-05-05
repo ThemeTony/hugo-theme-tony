@@ -24,9 +24,9 @@
                                 </span>-->
                                 {{ partial "components/post/header.html" . }}
                                 <div class="article-content">
-                                    {{.Content}}
+                                    {{ .Content }}
                                 </div>
-                                <div id="article-comments" class="article-comments" style="margin-top: 50px;"></div>
+                                {{ partial "components/comments.html" . }}
                             </div>
                         </div>
                     </div>

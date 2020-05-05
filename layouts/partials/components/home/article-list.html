@@ -8,7 +8,7 @@
                 {{ end }}
                 <div class="article-list-img-right">
                     <div>
-                        <a href="{{ .Permalink  }}" class="" style="text-decoration: none;">
+                        <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
                             <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
                         </a>
                         <p>{{ .Summary }}...</p>

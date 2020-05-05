@@ -15,6 +15,12 @@ newContentEditor = "D:/Typora/Typora.exe"
 # 摘要的字数限制
 summaryLength = 235
 
+# 是否开启 GitHub 风格的 Emoji 书写方式
+enableEmoji = true
+
+# 每一分页的文章数
+paginate = 10
+
 # 作者信息
 [author]
     # 名字
@@ -70,12 +76,51 @@ summaryLength = 235
         endLevel = 6
         ordered = true
 
+# Hugo 的输出控制
+[outputs]
+    page = ["HTML"]
+    home = ["HTML"]
+    section = ["HTML"]
+    # 类别
+    taxonomyTerm = ["HTML"]
+    # 类别项
+    taxonomy = ["HTML"]
+    # 说明：https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+
 ##########################################
 # 主题配置
 
 [params]
+
     ######################################
     # 站点信息
 
     # 站点的 LOGO
     siteLogo = "/images/t.jpg"
+
+    ######################################
+    # 评论
+
+    # 是否开启（全局设置）
+    enableComments = true
+    # 说明：文章的 Front Matter 中的 `comments`
+    #      的优先级高于此处
+
+    ## Valine
+    enableValine = true
+    valineVersion = "latest"
+    valineAppId = ""
+    valineAppKey = ""
+    valinePlaceholder = ""
+    valinePath = ""
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 15
+    valineVisitor = true
+    valineHighlight = true
+    avatarForce = true
+    valineRecordIP = true
+    valineServerURLs = ""
+    valineEnableQQ = false
+    valineRequiredFields = []
+    # 说明：https://valine.js.org/
