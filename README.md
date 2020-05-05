@@ -1,6 +1,12 @@
 <div align="center">
   <h1>hugo-theme-tony</h1>
   <p>一个使用Hugo静态网站生成器的简洁强大的博客主题</p>
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/ThemeTony/hugo-theme-tony/total">
+  <img alt="GitHub" src="https://img.shields.io/github/license/ThemeTony/hugo-theme-tony">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ThemeTony/hugo-theme-tony">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/ThemeTony/hugo-theme-tony?style=social">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/ThemeTony/hugo-theme-tony?style=social">
+  <img alt="GitHub forks" src="https://img.shields.io/github/watchers/ThemeTony/hugo-theme-tony?style=social">
 </div>
 
 ## 预览
