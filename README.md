@@ -1,5 +1,61 @@
-[wordpress-theme-tony](https://github.com/ThemeTony/wordpress-theme-tony)的简单移植，正在开发中
+<div align="center">
+  <h1>hugo-theme-tony</h1>
+  <p>一个使用Hugo静态网站生成器的简洁强大的博客主题</p>
+</div>
 
-### Demo
+## 预览
+
+![](https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200505195413.png)
+
+## 关联项目
+
+https://github.com/ThemeTony/tony_wordpress
+
+## 作者
+
+前端主要由 [HelipengTony](https://github.com/HelipengTony) 制作
+[FFRaycoder](https://github.com/FFRaycoder)移植
+
+## Demo
 
 <https://themetony.github.io/hugo-theme-tony/>
+
+---
+
+## 要求
+
+- Hugo: 未知
+
+## 下载和使用
+
+### 下载
+
+```bash
+$ git init
+$ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
+```
+
+### 使用
+
+1. 替换config.toml
+
+   ```bash
+   $ rm config.toml && cp themes/tony/exampleSite/config.toml config.toml
+   ```
+
+2. 新建一篇文章和`about`页面
+
+   ```bash
+   $ hugo new "posts/hello-world.md"
+   $ hugo new "about/index.md"
+   ```
+
+3. 启动服务:
+
+   ```
+   ~/blog $ hugo server -D
+   ```
+
+### 自定义
+
+查看<https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
