@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://www.raycoder.me/"
+baseURL = "https://themetony.github.io/hugo-theme-tony/"
 title = "Ray's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -24,9 +24,9 @@ summaryLength = 235
     # 座右铭或简介
     motto = "夜晚再黑，也压不过雪的白。"
     # 头像
-    avatar = "./images/t.jpg"
+    avatar = "/images/t.jpg"
     # 网站（默认值：baseURL）
-    website = "https://www.raycoder.me/"
+    website = "https://themetony.github.io/hugo-theme-tony/"
 
 [menu]
     # 菜单栏
@@ -78,4 +78,4 @@ summaryLength = 235
     # 站点信息
 
     # 站点的 LOGO
-    siteLogo = "./images/t.jpg"
+    siteLogo = "/images/t.jpg"
