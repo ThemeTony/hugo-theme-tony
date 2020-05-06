@@ -24,7 +24,7 @@ https://github.com/ThemeTony/tony_wordpress
 
 ## Demo
 
-<https://themetony.github.io/hugo-theme-tony/>
+<https://htony.js.org/>
 
 ---
 
