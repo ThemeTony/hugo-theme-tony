@@ -1,0 +1,12 @@
+<div style="text-align: left; margin: 60px 0px 40px 8px; border-radius: 6px;">
+    <ul class="post_tags" style="margin: 0px; padding: 0px 0px 15px; width: 100%;">
+    	<li class="cat-real" style="display: inline-block; color: rgb(102, 102, 102); font-size: 1.1rem; font-weight: 600; margin: 0px; letter-spacing: 1px;">
+            <a style="background-color: rgb(231, 243, 255); color: rgb(47, 148, 254); padding: 1px 12px; border-radius: 4px; font-size: 0.9rem;">文章标签</a>
+        </li>
+        {{ range (.GetTerms "tags") }}
+            <li class="cat-real" style="display: inline-block;">
+                <a href="{{ .Permalink }}" style="font-size: 0.9rem; border-radius: 4px; padding: 1px 12px;">{{ .LinkTitle }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</div>

@@ -8,26 +8,23 @@
             <div class="grid grid-centered">
                 <div id="grid-cell" class="grid-cell">
                     <div class="single-left">
+                        {{ partial "components/post/toc.html" . }}
+
                         {{ partial "components/post/adjacent-posts.html" . }}
                     </div>
                     <article class="article reveal">
                         <div id="load">
                             <div class="article-header">
-                                <!--
-                                <span class="badge badge-pill badge-danger single-badge">
-                                    <a href="https://www.ouorz.com/" class="nuxt-link-active" style="text-decoration: none;">
-                                        <i class="ri-article-line"></i>博客文章
-                                    </a>
-                                </span>   
-                                <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
-                                    <a href="https://www.ouorz.com/cate/7" class="post-header">研究学习</a>
-                                </span>-->
                                 {{ partial "components/post/header.html" . }}
-                                <div class="article-content">
-                                    {{ .Content }}
-                                </div>
-                                {{ partial "components/comments.html" . }}
                             </div>
+                            <div class="article-content">
+                                {{ .Content }}
+                            </div>
+                            {{ if .Params.Tags }}
+                                {{ partial "components/post/tags.html" . }}
+                            {{ end }}
+
+                            {{ partial "components/comments.html" . }}
                         </div>
                     </div>
                 </div>

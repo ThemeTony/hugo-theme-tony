@@ -7,6 +7,13 @@
                     <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
                 {{ end }}
                 <div class="article-list-img-right">
+                    {{ if .Params.Categories }} 
+                        <div>
+                            <em class="article-list-type1">
+                                <b>{{ delimit .Params.Categories " | " }}</b>
+                            </em>
+                        </div>
+                    {{ end }}
                     <div>
                         <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
                             <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
