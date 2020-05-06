@@ -1,8 +1,8 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://themetony.github.io/hugo-theme-tony/"
-title = "Ray's Blog"
+baseURL = "http://example.com/"
+title = "HUGO-THEME-TONY"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 
@@ -24,15 +24,22 @@ paginate = 10
 # 作者信息
 [author]
     # 名字
-    name = "Ray"
+    name = ""
     # 邮箱
-    email = "ray@raycoder.me"
+    email = ""
     # 座右铭或简介
-    motto = "夜晚再黑，也压不过雪的白。"
+    motto = ""
     # 头像
     avatar = "/images/t.jpg"
     # 网站（默认值：baseURL）
     website = "https://themetony.github.io/hugo-theme-tony/"
+    # GitHub
+    github = ""
+
+# 页面分类
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [menu]
     # 菜单栏
