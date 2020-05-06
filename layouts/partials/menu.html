@@ -1,7 +1,7 @@
 <div class="header-div2">
     {{ range .Site.Menus.main }}
         {{- $linkType := (string .Pre) -}}
-            <a href="{{ .URL }}">
+            <a href="{{ .URL | relURL}}">
                 {{- with .Name -}}
                     {{- printf `<button class="btn btn-light">%s</button>` . | safeHTML -}}
                 {{- end -}}

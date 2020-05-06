@@ -5,7 +5,7 @@ name = "Tony"
 license = "GPL-3.0"
 licenselink = "https://github.com/ThemeTony/hugo-theme-tony/blob/master/LICENSE"
 description = "https://github.com/ThemeTony/"
-homepage = "https://github.com/ThemeTony/hugo-theme-tony/"
+homepage = "https://htony.js.org/"
 tags = ["Blog", "Minimal", "Clean", "Typography", "Multilingual"]
 
 [author]

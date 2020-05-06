@@ -1,45 +1,50 @@
+<script src="{{ "/js/jquery.min.js" | relURL }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
 <script>
-    header = document.getElementById('header-div');
+    $header = $('#header-div');
     SY = window.scrollY;
     function setHeader(type) {
-        header.setAttribute('class','tony-header-' + type);
+        $header.attr('class','tony-header-' + type);
     }
     window.onscroll = function () {
         SY = window.scrollY;
         if (SY > 0) setHeader('scroll');
         else setHeader('fixed');
     }
-    header.addEventListener('mouseover', function () {
+    $header.hover(function () {
         setHeader('scroll');
     });
-    header.addEventListener('mouseout', function () {
+    $header.mouseout(function () {
         if(SY === 0) setHeader('fixed');
     });
     /////////////////////////////////////////////////
-    TSL = document.getElementById('tags-scroll-left');
-    TSR = document.getElementById('tags-scroll-right');
-    Tags = document.getElementsByClassName('cat-real');
+    $tsl = $('#tags-scroll-left');
+    $tsr = $('#tags-scroll-right');
+    $tags = $('#post_tags .cat-real');
     var deg = 0, tagsWidth = 0;
-    for(let i = 0;i<Tags.length;i++){
-        tagsWidth += Tags[i].scrollWidth;
+    for(let i = 0;i < $tags.length;i++){
+        tagsWidth += $tags[i].scrollWidth;
     }
     function tagsTransform(d) {
         deg += d;
-        for(let i = 0;i<Tags.length;i++){
-            Tags[i].setAttribute('style','transform:translateX('+ deg + 'px)');
-        }
+        $tags.each(function(){
+            $(this).attr('style','transform:translateX('+ deg + 'px)');
+        });
     }
-    TSL.addEventListener('click', function () {
+    $tsl.click(function () {
         if (deg < 0) tagsTransform(60);
     });
-    TSR.addEventListener('click', function(){
+    $tsr.click(function(){
         if (deg >= -tagsWidth-36) tagsTransform(-60);
         if(deg < -tagsWidth-36) {
             deg = -tagsWidth-36;
-            for(let i = 0;i < Tags.length;i++){
-                Tags[i].setAttribute('style','transform:translateX('+ deg + 'px)');
-            }
+            $tags.each(function(){
+                $(this).attr('style','transform:translateX('+ deg + 'px)');
+            });
         }
+    });
+	mediumZoom(document.querySelectorAll('div.article-content img'), {
+        background: '#fff'
     });
     {{ partial "custom/script.html" . }}
 </script>
