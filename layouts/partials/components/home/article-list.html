@@ -1,30 +1,17 @@
 <ul class="article-list">
     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
     {{ range $paginator.Pages }}
-        <li class="article-list-item reveal index-post-list ">
-            <div class="article-list-img-else">
-                {{ if (.Params.thumbnail) }}
-                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
-                {{ end }}
-                <div class="article-list-img-right">
-                    {{ if .Params.Categories }} 
-                        <div>
-                            <em class="article-list-type1">
-                                <b>{{ delimit .Params.Categories " | " }}</b>
-                            </em>
-                        </div>
-                    {{ end }}
-                    <div>
-                        <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
-                            <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
-                        </a>
-                        <p>{{ .Summary }}...</p>
-                        <div class="article-list-footer">
-                            <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
-                        </div>
+        <li class="article-list-item reveal index-post-list">
+            {{ if (.Params.thumbnail) }}
+                <div class="article-list-img-else">
+                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);">
+                        <div class="article-list-img-right">
+                            {{ partial "components/home/eachpost.html" . }}
                     </div>
                 </div>
-            </div>
+            {{ else }}
+                {{ partial "components/home/eachpost.html" . }}
+            {{ end }}
         </li>
     {{ end }}
 </ul>

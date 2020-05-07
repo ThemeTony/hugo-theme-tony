@@ -8,11 +8,6 @@
                 {{ partial "third-party/valine.html" . }}
             {{ end }}
 
-            {{ if .Site.Params.enableUtterances }}
-                <div id="utterances"></div>
-                {{ partial "third-party/utterances.html" . }}
-            {{ end }}
-
         </div>
     {{ end }}
 {{ end }}

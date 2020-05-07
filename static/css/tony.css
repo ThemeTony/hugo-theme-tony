@@ -70,10 +70,10 @@
 	background:#454b62!important;
 	box-shadow:0 2px 12px 0 rgba(0,0,0,.1)!important
 }
-.index-cates li a,.post_tags li a {
+.index-cates a,.post_tags a {
 	color:#eee!important
 }
-.post_tags li a {
+.post_tags a {
 	background-color:rgba(189,202,219,.329412)!important
 }
 .index-post-list {
@@ -1237,13 +1237,13 @@ img {
 	padding:25px 8px 10px 0!important;
 	margin-bottom:10px!important
 }
-.index-cates li {
+.index-cates a li {
 	display:inline-block!important;
 	box-shadow:none!important;
 	border:1px solid #eee;
 	padding:0 12px 2px!important
 }
-.index-cates li a {
+.index-cates a {
 	font-size:15px!important
 }
 .post_tags {
@@ -1662,7 +1662,7 @@ img {
 .index-cates {
 	color:#f6f7f8!important
 }
-.index-cates li {
+.index-cates a li {
 	background:#fff;
 	box-shadow:0 2px 12px 0 rgba(0,0,0,.1);
 	font-weight:500;
@@ -1674,20 +1674,23 @@ img {
 	font-size:1rem;
 	transition:all .3s
 }
-.index-cates li:first-child {
+.index-cates a li:first-child {
 	margin-left:10px
 }
-.index-cates li:hover {
+.index-cates a li:hover {
 	transform:scale(1.04)
 }
-.index-cates li a {
+.index-cates a li {
 	color:#333;
 	font-size:1rem;
 	text-decoration:none;
 	font-weight:600;
 	letter-spacing:.5px
 }
-.index-cates ul li:first-child {
+.index-cates a {
+	text-decoration: none;
+}
+.index-cates ul a li:first-child {
 	margin-left:0
 }
 @media screen and (max-width:767px) {
@@ -1755,7 +1758,7 @@ img {
 	width:97%;
 	white-space:nowrap;
 	margin:-5px 0 -90px 10px;
-	padding:0 0 100px
+	padding: 10px 0 100px
 }
 .post_tags_noscroll {
 	overflow-x:hidden!important
@@ -1849,7 +1852,6 @@ table {
 .index-cates {
 	width:100%;
 	overflow:hidden;
-	overflow-x:auto;
 	white-space:nowrap;
 	padding:20px 8px 20px 0
 }
@@ -3100,15 +3102,15 @@ input:focus {
 	transition:.2s ease-in-out;
 	margin-bottom:0!important
 }
-.scroll-left,.tags-scroll-right {
+.scroll-left,.tags-scroll-right, .cates-scroll-right {
 	display:none
 }
-}.tags-scroll-right {
+}.tags-scroll-right, .cates-scroll-right {
 	border-radius:50%;
 	background:#fff;
 	width:28px;
 	height:28px;
-	margin-top:-4px;
+	margin-top:7px;
 	margin-left:-18px;
 	transform:translateX(25px);
 	font-weight:600;
@@ -3121,7 +3123,7 @@ input:focus {
 	opacity:0;
 	cursor:pointer
 }
-.tags-scroll-right:hover {
+.tags-scroll-right:hover, .cates-scroll-right {
 	opacity:.9!important
 }
 .scroll-left {

@@ -3,7 +3,7 @@
 {{ $prev := .Scratch.Get "prev" }}
 {{ $next := .Scratch.Get "next" }}
 {{ if or $prev $next }}
-    {{ if $next }}
+    {{ if and $next (not $next.Params.notclick) }}
         <div>
             <div class="index-div-prev">
                 <h4>上一篇</h4>
@@ -13,7 +13,7 @@
             </div>
         </div>
     {{ end }}
-    {{ if $prev }}
+    {{ if and $prev (not $prev.Params.notclick) }}
         <div>
             <div class="index-div-next">
                 <h4>下一篇</h4>

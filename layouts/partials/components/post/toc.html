@@ -1,4 +1,4 @@
-{{ if .Params.toc }}
+{{ if .Params.toc | default .Site.Params.enableToc }}
     <div class="index-div">
         <div class="single-index">
             <h4>
