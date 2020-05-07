@@ -1,5 +1,5 @@
 {{ if .Params.Categories }}
-    {{ if not .Params.buyLink }}
+    {{ if not .Params.buy }}
         {{ if .Params.categoryLink }}
             <div>
                 <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
@@ -45,7 +45,7 @@
     {{ end }}
 {{ end }}
 <div>
-    {{ if not (.Params.notclick) }}
+    {{ if not (.Params.noclick) }}
         <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
             <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
         </a>

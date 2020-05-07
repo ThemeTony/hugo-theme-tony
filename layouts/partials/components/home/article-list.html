@@ -4,9 +4,9 @@
         <li class="article-list-item reveal index-post-list">
             {{ if (.Params.thumbnail) }}
                 <div class="article-list-img-else">
-                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);">
-                        <div class="article-list-img-right">
-                            {{ partial "components/home/eachpost.html" . }}
+                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
+                    <div class="article-list-img-right">
+                        {{ partial "components/home/eachpost.html" . }}
                     </div>
                 </div>
             {{ else }}
