@@ -1,6 +1,6 @@
 {{ with .Params.categories }}
     {{ range . }}
-        <span class="badge badge-pill badge-danger single-badge" style="margin-left: 10px;">
+        <span class="badge badge-pill badge-danger single-badge">
             <a href="{{ "categories" | absURL}}/{{ . | urlize }}" class="post-header">{{ . }}</a>
         </span>
     {{ end }}

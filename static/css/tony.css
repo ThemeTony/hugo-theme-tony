@@ -1841,9 +1841,8 @@ tr {
 }
 td {
 	border:1px solid #f1f2f3;
-	white-space:nowrap;
-	text-overflow:ellipsis;
-	overflow:hidden;
+	word-break: break-all;
+	word-wrap:break-word;
 	padding:5px
 }
 table {
