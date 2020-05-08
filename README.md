@@ -33,6 +33,7 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 - Thumbnail
 - Valine
 - Pinned pages
+- Reading bar
 
 ### Document
 

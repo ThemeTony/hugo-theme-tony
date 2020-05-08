@@ -31,7 +31,8 @@ https://github.com/ThemeTony/tony_wordpress
 - 外链引导
 - Thumbnail
 - Valine
-- 首页标记的页面
+- 首页标记页面
+- 阅读进度条
 
 ## 文档
 
