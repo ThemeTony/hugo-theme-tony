@@ -32,6 +32,7 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 - Social links
 - Thumbnail
 - Valine
+- Pinned pages
 
 ### Document
 

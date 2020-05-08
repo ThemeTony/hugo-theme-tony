@@ -7,6 +7,8 @@
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/ThemeTony/hugo-theme-tony?style=social">
   <img alt="GitHub forks" src="https://img.shields.io/github/forks/ThemeTony/hugo-theme-tony?style=social">
   <img alt="GitHub forks" src="https://img.shields.io/github/watchers/ThemeTony/hugo-theme-tony?style=social">
+  <p><a href="https://github.com/ThemeTony/hugo-theme-tony/blob/master/README.md">English</a> | 简体中文
+  </p>
 </div>
 
 ## 预览
@@ -29,6 +31,7 @@ https://github.com/ThemeTony/tony_wordpress
 - 外链引导
 - Thumbnail
 - Valine
+- 首页标记的页面
 
 ## 文档
 

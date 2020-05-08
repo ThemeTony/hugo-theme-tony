@@ -4,6 +4,20 @@
             <a href="/" title="TonyHe" class="header-logo" style="text-decoration: none;">{{ $.Site.Author.name }}</a>
             <p class="lead" style="margin-top: 0px; margin-left: 5px;">{{ $.Site.Author.motto }}</p>
     </nav>
+    {{ with .Site.Params.pinned }}
+        <div class="index-cates">
+            {{ range . }}
+                <a href="{{ .url }}" class="" title="{{ .title }}">
+                    <li class="cat-item cat-item-4 cat-real" style="display: inline-block;">
+                        <div class="header-item-icon-div">
+                            <i class="{{ .icon }}"></i>
+                        </div>
+                        {{ .name }}
+                    </li>
+                </a>
+                {{ end }}
+        </div>
+    {{ end }}
     <div class="tags-div">
         <a class="tags-scroll-right scroll-left" id="tags-scroll-left">
             <i class="ri-arrow-left-line"></i>
