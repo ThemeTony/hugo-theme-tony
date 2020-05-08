@@ -115,12 +115,12 @@ paginate = 10
     # 评论
 
     # 是否开启（全局设置）
-    enableComments = true
+    enableComments = false
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
     ## Valine
-    enableValine = true
+    enableValine = false
     valineVersion = "latest"
     valineAppId = ""
     valineAppKey = ""

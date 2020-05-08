@@ -1,98 +1,103 @@
 <div align="center">
   <h1>hugo-theme-tony</h1>
-  <p>一个使用Hugo静态网站生成器的简洁强大的博客主题</p>
+  <p>An Elegant Hugo Theme Based on WordPress Theme Tony </p>
   <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/ThemeTony/hugo-theme-tony/total">
   <img alt="GitHub" src="https://img.shields.io/github/license/ThemeTony/hugo-theme-tony">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ThemeTony/hugo-theme-tony">
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/ThemeTony/hugo-theme-tony?style=social">
   <img alt="GitHub forks" src="https://img.shields.io/github/forks/ThemeTony/hugo-theme-tony?style=social">
   <img alt="GitHub forks" src="https://img.shields.io/github/watchers/ThemeTony/hugo-theme-tony?style=social">
+  <p>English |
+    <a href="https://github.com/ThemeTony/hugo-theme-tony/blob/master/README.zh-cn.md">简体中文</a>
+  </p>
 </div>
 
-## 预览
 
-![](https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png)
+### Screenshot
 
-## 关联项目
+![](https://github.com/ThemeTony/hugo-theme-tony/tree/master/images/screenshot.png)
+
+### Related repository
 
 https://github.com/ThemeTony/tony_wordpress
 
-## 作者
+### Author
 
-前端主要由 [HelipengTony](https://github.com/HelipengTony) 制作
-[FFRaycoder](https://github.com/FFRaycoder)移植
+The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
+[FFRaycoder](https://github.com/FFRaycoder) transplantation
 
-## 特性
+### Feature
 
 - Medium Zoom
-- 左下个人GitHub链接
-- 外链引导
+- Social links
 - Thumbnail
 - Valine
 
-## 文档
+### Document
 
 <https://htony.js.org/docs-of-hugo-theme-tony/>
 
-## Demo
+### Demo
 
 <https://htony.js.org/>
 
 ---
 
-## 要求
+### Requirements
 
-- Hugo: 未知
+- Hugo: 0.59.1
 
-## 下载和使用
+### Installation and Usage
 
-### 下载
+#### Download
 
 ```bash
 $ git init
 $ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
 ```
 
-### 使用
+#### Usage
 
-1. 替换config.toml
+1. Replace `config.toml` with [config examples](https://github.com/ThemeTony/hugo-theme-tony/blob/master/exampleSite/config.toml).
 
    ```bash
    $ rm config.toml && cp themes/tony/exampleSite/config.toml config.toml
    ```
 
-2. 新建一篇文章和`about`页面
+2. Create a new post and the about page:
 
    ```bash
    $ hugo new "posts/hello-world.md"
    $ hugo new "about/index.md"
    ```
 
-3. 启动服务:
+3. Now:
 
    ```
    ~/blog $ hugo server -D
    ```
 
-### 自定义
+## Customize
 
-查看<https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
+See <https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
 
-## 支持的`Front Matter`：
+### Supported Front Matter
 
-|                              项                              |                  作用                  |                             示例                             |
-| :----------------------------------------------------------: | :------------------------------------: | :----------------------------------------------------------: |
-|                            title                             |                文章标题                |               title: "Hugo Theme Tony主题文档"               |
-|                             date                             |              文章发布日期              |               date: 2020-05-07T09:51:27+08:00                |
-|                            draft                             |                是否草稿                |                         draft: false                         |
-|                           keywords                           |        文章关键词，用于HTML头部        |                    keywords: ["移植主题"]                    |
-|                          categories                          |             分类（未完成）             |                     categories: ["博客"]                     |
-|                             tags                             |             标签（未完成）             |                        tags: ["博客"]                        |
-|                           noclick                            | 不允许点击（类似碎碎念），仅在主页展示 |                       notclick: false                        |
-|                         categoryLink                         |          分类按钮点击时的链接          |                      categoryLink: "/"                       |
-|                             toc                              |              是否开启目录              |                          toc: true                           |
-| buy: false<br/>buyLink: ""<br/>buyName: ""<br/>buyInfo: ""<br/>buyImage: ""<br/>buyButtonText: "" |                购物链接                | buyLink: "https://htony.js.org"<br/>buyName: "hugo-theme-tony"<br/>buyInfo: "WP-Theme-Tony的hugo移植版"<br/>buyImage: "/images/t.jpg"<br/>buyButtonText: "官网" |
-|                          thumbnail                           |                 缩略图                 | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
-|                            weight                            |                文章权重                |                          weight: 2                           |
+|                             Name                             |    Description     |                           Example                            |
+| :----------------------------------------------------------: | :----------------: | :----------------------------------------------------------: |
+|                            title                             |         *          |                   title: "Hugo Theme Tony"                   |
+|                             date                             |         *          |               date: 2020-05-07T09:51:27+08:00                |
+|                            `slug`                            |         *          |              `slug: "docs-of-hugo-theme-tony"`               |
+|                            draft                             |         *          |                         draft: false                         |
+|                           keywords                           |         *          |                      keywords: ["Blog"]                      |
+|                          categories                          |         *          |                     categories: ["Blog"]                     |
+|                             tags                             |         *          |                        tags: ["Blog"]                        |
+|                           noclick                            |      no click      |                       notclick: false                        |
+|                         categoryLink                         |    categoryLink    |                      categoryLink: "/"                       |
+|                             toc                              |     enable toc     |                          toc: true                           |
+| buy: false<br/>buyLink: ""<br/>buyName: ""<br/>buyInfo: ""<br/>buyImage: ""<br/>buyButtonText: "" |      Buy link      | buyLink: "https://htony.js.org"<br/>buyName: "hugo-theme-tony"<br/>buyInfo: "WP-Theme-Tony in hugo"<br/>buyImage: "/images/t.jpg"<br/>buyButtonText: "Website" |
+|                          thumbnail                           |     thumbnail      | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
+|                            weight                            |       weight       |                          weight: 2                           |
+|                         `readingBar`                         | enable reading bar |                      `readingBar: true`                      |
 
-以上的分类与标签页尚未完成，求大佬帮助:smirk:
+The above classification and tab pages are not completed yet, please help:smirk:
