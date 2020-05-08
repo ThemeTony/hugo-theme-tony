@@ -2421,7 +2421,7 @@ pre {
 	.mob-header-text {
 	color:#333!important
 }
-}.reading-bar {
+}#reading-bar {
 	background:#3797fe;
 	height:2px;
 	position:fixed;

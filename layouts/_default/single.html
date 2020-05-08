@@ -4,7 +4,7 @@
 
     {{ partial "header.html" . }}
     <body>
-        <div id="post-container">
+        <div id="post-container" class="pjax-container">
             <div class="grid grid-centered">
                 <div id="grid-cell" class="grid-cell">
                     <div class="single-left">
@@ -12,6 +12,9 @@
 
                         {{ partial "components/post/adjacent-posts.html" . }}
                     </div>
+                    {{ if .Params.readingBar | default .Site.Params.enableReadingBar }}
+                        <div id="reading-bar"></div>
+                    {{ end }}
                     <article class="article reveal">
                         <div id="load">
                             <div class="article-header">

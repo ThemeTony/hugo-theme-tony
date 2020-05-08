@@ -1,26 +1,30 @@
 <script src="{{ "/js/jquery.min.js" | relURL }}"></script>
 {{ partial "third-party/medium-zoom.html" . }}
 <script>
-    $header = $('#header-div');
-    SY = window.scrollY;
+    var $header = $('#header-div'),
+        $readingBar = $('#reading-bar'),
+        $SY = $(window).scrollTop();
     function setHeader(type) {
         $header.attr('class','tony-header-' + type);
     }
-    window.onscroll = function () {
-        SY = window.scrollY;
-        if (SY > 0) setHeader('scroll');
+    $(window).scroll(function () {
+        $SY = $(window).scrollTop();
+        if ($readingBar) {
+            $readingBar.attr('style', 'width: ' + Math.floor($(document).scrollTop()/($(document).height()-$(window).height())*100) + '%');
+        }
+        if ($SY > 0) setHeader('scroll');
         else setHeader('fixed');
-    }
+    });
     $header.hover(function () {
         setHeader('scroll');
     });
     $header.mouseout(function () {
-        if(SY === 0) setHeader('fixed');
+        if($SY === 0) setHeader('fixed');
     });
     /////////////////////////////////////////////////
-    $tsl = $('#tags-scroll-left');
-    $tsr = $('#tags-scroll-right');
-    $tags = $('#post_tags .cat-real');
+    var $tsl = $('#tags-scroll-left'),
+        $tsr = $('#tags-scroll-right'),
+        $tags = $('#post_tags .cat-real');
     var deg = 0, tagsWidth = 0;
     for(let i = 0;i < $tags.length;i++){
         tagsWidth += $tags[i].scrollWidth;
@@ -43,5 +47,6 @@
             });
         }
     });
-    {{ partial "custom/script.html" . }}
 </script>
+
+{{ partial "custom/script.html" . }}
