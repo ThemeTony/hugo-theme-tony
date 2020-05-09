@@ -1,5 +1,6 @@
 ##########################################
 # 站点配置
+# 图标: https://RemixIcon.com/
 
 baseURL = "http://example.com/"
 title = "HUGO-THEME-TONY"
@@ -41,6 +42,14 @@ paginate = 10
   category = "categories"
   tag = "tags"
 
+##########################################
+# 菜单配置
+
+# 菜单内的配置说明如下：
+# url           链接地址
+# name          文本（留空（""）则无）
+# weight        权重
+
 [menu]
     # 菜单栏
     [[menu.main]]
@@ -78,12 +87,6 @@ paginate = 10
             hardWraps = false
             unsafe = true
             xHTML = false
-    [markup.highlight]
-        codeFences = true
-        guessSyntax = false
-        lineNos = true
-        lineNumbersInTable = true
-        noClasses = true
     [markup.tableOfContents]
         startLevel = 2
         endLevel = 6
