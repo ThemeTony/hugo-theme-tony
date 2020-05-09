@@ -65,7 +65,7 @@ https://github.com/ThemeTony/tony_wordpress
 
 ```bash
 $ git init
-$ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
+$ git submodule add --depth 1 https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
 ```
 
 ### 使用
