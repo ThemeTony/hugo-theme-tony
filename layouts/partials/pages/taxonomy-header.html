@@ -1,0 +1,31 @@
+<div id="header_info" class="index-top">
+    <nav class="header-nav reveal">
+        <div class="cate-nav">
+            <div>
+                <a href="/" title="TonyHe" class="header-logo" style="text-decoration: none;">{{ .Title }}</a>
+            </div>
+            <div>
+                <a href="/" class="nuxt-link-active">
+                    <button type="button" class="btn cate-back btn-primary">
+                        <i class="ri-arrow-left-line"></i>
+                        回到主页
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    {{ with .Site.Params.pinned }}
+        <div class="index-cates">
+            {{ range . }}
+                <a href="{{ .url }}" class="" title="{{ .title }}">
+                    <li class="cat-item cat-item-4 cat-real" style="display: inline-block;">
+                        <div class="header-item-icon-div">
+                            <i class="{{ .icon }}"></i>
+                        </div>
+                        {{ .name }}
+                    </li>
+                                </a>
+            {{ end }}
+                        </div>
+    {{ end }}
+</div>

@@ -9,7 +9,7 @@
                 <div id="grid-cell" class="grid-cell">
                     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
                     
-                    {{ partial "components/home/header-info.html" . }}
+                    {{ partial "pages/taxonomy-header.html" . }}
                     <ul class="article-list">
                     {{ range .Data.Pages }}
                         <li class="article-list-item reveal index-post-list">

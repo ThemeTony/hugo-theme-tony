@@ -14,7 +14,7 @@
     $(window).scroll(function () {
         $SY = $(window).scrollTop();
         if ($readingBar) {
-            $readingBar.attr('style', 'width: ' + Math.floor($(document).scrollTop()/($(document).height()-$(window).height())*100) + '%');
+            $readingBar.attr('style', 'width: ' + $(document).scrollTop()/($(document).height()-$(window).height())*100 + '%');
         }
         if ($SY > 0) setHeader('scroll');
         else setHeader('fixed');
