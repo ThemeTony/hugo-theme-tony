@@ -24,6 +24,16 @@
     {{- $description := .Description | default .Site.Params.siteDescription | plainify -}}
     <meta name="description" content="{{ $description }}" />
 
+    {{- with .Site.Params.googleSiteVerification }}
+        <meta name="google-site-verification" content="{{ . }}" />
+    {{- end }}
+    
+    {{- if .Site.Params.enableGoogleAnalytics }}
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        {{ partial "third-party/google-analytics.html" . }}
+    {{- end }}
+
     <!-- SEO -->
     <link rel="canonical" href="{{ .Permalink }}" />
     {{- $Deliver := . -}}

@@ -1,5 +1,9 @@
 <script src="{{ "/js/jquery.min.js" | relURL }}"></script>
 {{ partial "third-party/medium-zoom.html" . }}
+
+{{ if .Site.Params.enableBaiduPush }}
+    {{ partial "third-party/baidu-push.html" . }}
+{{ end }}
 <script>
     var $header = $('#header-div'),
         $readingBar = $('#reading-bar'),

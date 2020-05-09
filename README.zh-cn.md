@@ -33,6 +33,8 @@ https://github.com/ThemeTony/tony_wordpress
 - Valine
 - 首页标记页面
 - 阅读进度条
+- 谷歌统计
+- 百度推送
 
 ## 文档
 

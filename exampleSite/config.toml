@@ -137,3 +137,25 @@ paginate = 10
     valineEnableQQ = false
     valineRequiredFields = []
     # 说明：https://valine.js.org/
+
+    ######################################
+    # Google Analytics
+
+    enableGoogleAnalytics = false
+
+    # 跟踪代码的类型
+    trackingCodeType = ""
+    # 说明：gtag 或 analytics
+
+    trackingID = ""
+
+    ######################################
+    # Google Site Verification
+
+    googleSiteVerification = ""
+
+
+    ######################################
+    # Baidu推送
+
+    enableBaiduPush = true

@@ -15,7 +15,7 @@
 
 ### Screenshot
 
-![](https://github.com/ThemeTony/hugo-theme-tony/tree/master/images/screenshot.png)
+![](https://raw.githubusercontent.com/ThemeTony/hugo-theme-tony/master/images/screenshot.png)
 
 ### Related repository
 
@@ -34,6 +34,8 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 - Valine
 - Pinned pages
 - Reading bar
+- Google Analytics
+- Baidu Push
 
 ### Document
 
