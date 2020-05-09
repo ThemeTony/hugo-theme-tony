@@ -30,11 +30,19 @@ https://github.com/ThemeTony/tony_wordpress
 - 左下个人GitHub链接
 - 外链引导
 - Thumbnail
-- Valine
 - 首页标记页面
 - 阅读进度条
 - 谷歌统计
 - 百度推送
+- 使用Bootstrap作为CSS模板
+- 标签 (页)
+- 分类 (页)
+- 阅读进度条
+- 评论
+  - Valine
+- Pinned Pages
+- JQuery
+- Remixicon https://remixicon.cn/
 
 ## 文档
 

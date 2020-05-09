@@ -31,11 +31,18 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 - Medium Zoom
 - Social links
 - Thumbnail
-- Valine
-- Pinned pages
-- Reading bar
+- Based on Bootstrap
+- Tags (Page)
+- Categories (Page)
+- Reading Bar
 - Google Analytics
+- Google Site Verification
+- Comments
+  - Valine
 - Baidu Push
+- Pinned Pages
+- JQuery
+- Remixicon https://remixicon.cn/
 
 ### Document
 
