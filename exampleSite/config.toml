@@ -52,6 +52,12 @@ paginate = 10
         name = "关于"
         weight = 2
 
+[[params.pinned]]
+    title = "HUGO-THEME-TONY"
+    name = "HUGO-THEME-TONY"
+    icon = "ri-code-box-line"
+    url = "https://htony.js.org/"
+
 # Markdown 渲染器
 [markup]
     defaultMarkdownHandler = "goldmark"
@@ -110,6 +116,18 @@ paginate = 10
     
     # 是否开启（全局设置）
     enableToc = true
+
+    ######################################
+    # 阅读进度条
+    
+    # 是否开启（全局设置）
+    enableReadingBar = true
+
+    ######################################
+    # 文章上下页
+    
+    # 是否开启（全局设置）
+    enableAdjacentPost = true
 
     ######################################
     # 评论
