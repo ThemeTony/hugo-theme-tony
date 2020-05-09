@@ -104,4 +104,3 @@ See <https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/c
 |                            weight                            |       weight       |                          weight: 2                           |
 |                         `readingBar`                         | enable reading bar |                      `readingBar: true`                      |
 
-The above classification and tab pages are not completed yet, please help:smirk:

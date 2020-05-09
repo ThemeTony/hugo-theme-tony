@@ -1,0 +1,22 @@
+<main class="main list" id="main">
+    <div id="post-container" class="pjax-container">
+        <div class="grid grid-centered">
+            <div id="grid-cell" class="grid-cell">
+                <article class="article reveal">
+                    <div id="load">
+                        <h2 class="single-h2">{{ .Title }}</h2>
+                        <div class="article-content" style="padding-top: 10px">
+                            {{ $type := .Type }}
+                            {{ range .Data.Terms.ByCount }}
+                                {{ $name := .Name }}
+                                {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+                                    <a href="{{ .RelPermalink }}"><button class="btn btn-light">{{ .LinkTitle | default .Data.Term | default $name }}</button></a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

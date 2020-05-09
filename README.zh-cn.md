@@ -101,4 +101,3 @@ $ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
 |                          thumbnail                           |                 缩略图                 | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
 |                            weight                            |                文章权重                |                          weight: 2                           |
 
-以上的分类与标签页尚未完成，求大佬帮助:smirk:
