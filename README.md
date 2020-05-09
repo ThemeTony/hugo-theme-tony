@@ -43,6 +43,7 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 - Pinned Pages
 - JQuery
 - Remixicon https://remixicon.cn/
+- Archives Page
 
 ### Document
 
@@ -92,7 +93,25 @@ $ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
 
 See <https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
 
-### Supported Front Matter
+## Archives Page
+
+```bash
+$ hugo new archives/_index.md
+```
+
+`archives/_index.md`
+
+```markdown
+---
+title: "Archives"
+date: 2020-05-09T15:50:35+08:00
+draft: false
+type: archives
+adjacentPost: false
+---
+```
+
+## Supported Front Matter
 
 |                             Name                             |    Description     |                           Example                            |
 | :----------------------------------------------------------: | :----------------: | :----------------------------------------------------------: |

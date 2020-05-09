@@ -43,6 +43,7 @@ https://github.com/ThemeTony/tony_wordpress
 - Pinned Pages
 - JQuery
 - Remixicon https://remixicon.cn/
+- 归档页
 
 ## 文档
 
@@ -91,6 +92,24 @@ $ git clone https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
 ### 自定义
 
 查看<https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
+
+## 归档页
+
+```bash
+$ hugo new archives/_index.md
+```
+
+`archives/_index.md`
+
+```markdown
+---
+title: "Archives"
+date: 2020-05-09T15:50:35+08:00
+draft: false
+type: archives
+adjacentPost: false
+---
+```
 
 ## 支持的`Front Matter`：
 
