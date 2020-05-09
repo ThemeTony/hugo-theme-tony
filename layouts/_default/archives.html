@@ -11,16 +11,18 @@
                                 <h2>{{ .Key }}</h2>
                                 {{ range .Pages.GroupByDate "2006 / 1" }}
                                     <h3>{{ .Key }}</h3>
-									{{ range .Pages }}
-									    <div>
-										    <a href="{{ .RelPermalink }}" class="post-a">
-											    <p>
-												    <em class="post-date">{{ .PublishDate.Format "2006-01-02" }}</em>
-													{{ .LinkTitle }}
-												</p>
-											</a>
-										</div>
-									{{ end }}
+                                    {{ range .Pages }}
+                                        {{ if not .Params.noclick }}
+                                            <div>
+                                                <a href="{{ .RelPermalink }}" class="post-a">
+                                                    <p>
+                                                        <em class="post-date">{{ .PublishDate.Format "2006-01-02" }}</em>
+                                                        {{ .LinkTitle }}
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        {{ end }}
+                                    {{ end }}
                                 {{ end }}
                             </li>
                         {{ end }}

@@ -113,20 +113,21 @@ adjacentPost: false
 
 ## Supported Front Matter
 
-|                             Name                             |    Description     |                           Example                            |
-| :----------------------------------------------------------: | :----------------: | :----------------------------------------------------------: |
-|                            title                             |         *          |                   title: "Hugo Theme Tony"                   |
-|                             date                             |         *          |               date: 2020-05-07T09:51:27+08:00                |
-|                            `slug`                            |         *          |              `slug: "docs-of-hugo-theme-tony"`               |
-|                            draft                             |         *          |                         draft: false                         |
-|                           keywords                           |         *          |                      keywords: ["Blog"]                      |
-|                          categories                          |         *          |                     categories: ["Blog"]                     |
-|                             tags                             |         *          |                        tags: ["Blog"]                        |
-|                           noclick                            |      no click      |                       notclick: false                        |
-|                         categoryLink                         |    categoryLink    |                      categoryLink: "/"                       |
-|                             toc                              |     enable toc     |                          toc: true                           |
-| buy: false<br/>buyLink: ""<br/>buyName: ""<br/>buyInfo: ""<br/>buyImage: ""<br/>buyButtonText: "" |      Buy link      | buyLink: "https://htony.js.org"<br/>buyName: "hugo-theme-tony"<br/>buyInfo: "WP-Theme-Tony in hugo"<br/>buyImage: "/images/t.jpg"<br/>buyButtonText: "Website" |
-|                          thumbnail                           |     thumbnail      | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
-|                            weight                            |       weight       |                          weight: 2                           |
-|                         `readingBar`                         | enable reading bar |                      `readingBar: true`                      |
+|                             Name                             |     Description     |                           Example                            |
+| :----------------------------------------------------------: | :-----------------: | :----------------------------------------------------------: |
+|                            title                             |          *          |                   title: "Hugo Theme Tony"                   |
+|                             date                             |          *          |               date: 2020-05-07T09:51:27+08:00                |
+|                            `slug`                            |          *          |              `slug: "docs-of-hugo-theme-tony"`               |
+|                            draft                             |          *          |                         draft: false                         |
+|                           keywords                           |          *          |                      keywords: ["Blog"]                      |
+|                          categories                          |          *          |                     categories: ["Blog"]                     |
+|                             tags                             |          *          |                        tags: ["Blog"]                        |
+|                           noclick                            |      no click       |                       notclick: false                        |
+|                         categoryLink                         |    categoryLink     |                      categoryLink: "/"                       |
+|                             toc                              |     enable toc      |                          toc: true                           |
+| buy: false<br/>buyLink: ""<br/>buyName: ""<br/>buyInfo: ""<br/>buyImage: ""<br/>buyButtonText: "" |      Buy link       | buyLink: "https://htony.js.org"<br/>buyName: "hugo-theme-tony"<br/>buyInfo: "WP-Theme-Tony in hugo"<br/>buyImage: "/images/t.jpg"<br/>buyButtonText: "Website" |
+|                          thumbnail                           |      thumbnail      | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
+|                            weight                            |       weight        |                          weight: 2                           |
+|                          readingBar                          | enable reading bar  |                       readingBar: true                       |
+|                         adjacentPost                         | show adjacent post? |                      adjacentPost: true                      |
 

@@ -127,4 +127,5 @@ adjacentPost: false
 | buy: false<br/>buyLink: ""<br/>buyName: ""<br/>buyInfo: ""<br/>buyImage: ""<br/>buyButtonText: "" |                购物链接                | buyLink: "https://htony.js.org"<br/>buyName: "hugo-theme-tony"<br/>buyInfo: "WP-Theme-Tony的hugo移植版"<br/>buyImage: "/images/t.jpg"<br/>buyButtonText: "官网" |
 |                          thumbnail                           |                 缩略图                 | thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png" |
 |                            weight                            |                文章权重                |                          weight: 2                           |
+|                         adjacentPost                         |             是否显示上下页             |                      adjacentPost: true                      |
 
