@@ -51,7 +51,9 @@ https://github.com/ThemeTony/tony_wordpress
 
 ## Demo
 
-<https://htony.js.org/>
+- <https://htony.js.org/>
+
+- [Ray's Blog](https://www.raycoder.me)
 
 ---
 

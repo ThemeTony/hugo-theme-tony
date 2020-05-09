@@ -51,7 +51,9 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 
 ### Demo
 
-<https://htony.js.org/>
+- <https://htony.js.org/>
+
+- [Ray's Blog](https://www.raycoder.me)
 
 ---
 
