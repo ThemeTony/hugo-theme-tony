@@ -12,6 +12,11 @@
                 CC BY-NC 4.0
             </a>
         </p>
+		<p>
+		    {{ if .Site.Params.displayPoweredBy }}
+                Powered by <a href="https://github.com/gohugoio/hugo">Hugo</a> | Theme is <a href="https://github.com/ThemeTony/hugo-theme-tony">Tony</a>
+			{{ end }}
+        </p>
     </div>
 </div>
 {{ partial "custom/footer.html" . }}

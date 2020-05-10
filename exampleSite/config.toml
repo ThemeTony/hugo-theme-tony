@@ -137,7 +137,7 @@ paginate = 10
     enableAdjacentPost = true
 
     ######################################
-    # 是否显示 Hugo 和 MemE 的链接
+    # 是否显示 Hugo 和 Tony 的链接
 
     displayPoweredBy = true
 
