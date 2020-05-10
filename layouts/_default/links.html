@@ -5,8 +5,8 @@
                 <div id="grid-cell" class="grid-cell">
                     {{ partial "pages/taxonomy-header.html" . }}
                     <ul class="article-list friends-table" style="margin-top:20px">
-					    {{ with .Site.Data.links }}
-					        {{- range .links -}}
+                        {{ with .Site.Data.links }}
+                            {{- range .links -}}
                                 <li class="article-list-item reveal index-post-list friends-li" style="display: flex;">
                                     <div class="link-list-left">
                                         <img src="{{ .image }}" class="link-list-img friends-img img-none-line">
@@ -22,8 +22,8 @@
                                         </p>
                                     </div>
                                 </li>
-					    	{{- end -}}
-						{{ end }}
+                            {{- end -}}
+                        {{ end }}
                     </ul>
                 </div>
             </div>

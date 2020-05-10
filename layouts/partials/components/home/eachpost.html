@@ -54,6 +54,10 @@
         <p>{{ .Content }}</p>
     {{ end }}
     <div class="article-list-footer">
+        {{ if .Params.buy }}
+            <a class="article-list-date" style="margin: 0px;">{{ delimit .Params.Categories " | " }}</a>
+            <span class="article-list-divider">-</span>
+        {{ end }}
         <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
     </div>
 </div>
