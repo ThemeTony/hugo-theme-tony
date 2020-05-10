@@ -1,0 +1,33 @@
+{{ define "main" }}
+    <main class="main list" id="main">
+        <div id="post-container">
+            <div class="grid grid-centered" style="max-width: 660px; padding: 0px 20px; margin-top: 80px;">
+                <div id="grid-cell" class="grid-cell">
+                    {{ partial "pages/taxonomy-header.html" . }}
+                    <ul class="article-list friends-table" style="margin-top:20px">
+					    {{ with .Site.Data.links }}
+					        {{- range .links -}}
+                                <li class="article-list-item reveal index-post-list friends-li" style="display: flex;">
+                                    <div class="link-list-left">
+                                        <img src="{{ .image }}" class="link-list-img friends-img img-none-line">
+                                    </div>
+                                    <div class="link-list-right friends-right">
+                                        <a href="{{ .link }}" target="_blank" style="text-decoration: none;">
+                                            <h5 class="friends-h5">
+                                                {{ .name }}
+                                            </h5>
+                                        </a>
+                                        <p class="cate-link-item-p cate-link-p friends-p">
+                                            {{ .bio }}
+                                        </p>
+                                    </div>
+                                </li>
+					    	{{- end -}}
+						{{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{ partial "script.html" . }}
+    </main>
+{{ end }}

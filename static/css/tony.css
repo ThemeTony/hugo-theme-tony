@@ -1851,6 +1851,7 @@ table {
 .index-cates {
 	width:100%;
 	overflow:hidden;
+	overflow-x:auto;
 	white-space:nowrap;
 	padding:20px 8px 20px 0
 }
