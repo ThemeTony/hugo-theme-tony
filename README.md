@@ -113,6 +113,26 @@ adjacentPost: false
 ---
 ```
 
+## Links Page
+
+```bash
+$ hugo new links/_index.md
+```
+
+`links/_index.md`
+
+```markdown
+---
+title: "Links"
+date: 2020-05-09T15:50:35+08:00
+draft: false
+type: links
+adjacentPost: false
+---
+```
+
+Copy `themes/tony/data/links.toml` to` blog/data/links.toml` and modify it.
+
 ## Supported Front Matter
 
 |                             Name                             |     Description     |                           Example                            |

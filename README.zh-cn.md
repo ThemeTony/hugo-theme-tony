@@ -113,6 +113,8 @@ adjacentPost: false
 ---
 ```
 
+复制`themes/tony/data/links.toml`至`blog/data/links.toml`并修改。
+
 ## 支持的`Front Matter`：
 
 |                              项                              |                  作用                  |                             示例                             |
