@@ -1,4 +1,5 @@
 <script src="{{ "/js/jquery.min.js" | relURL }}"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {{ partial "third-party/medium-zoom.html" . }}
 
 {{ if .Site.Params.enableBaiduPush }}
@@ -51,6 +52,16 @@
             });
         }
     });
+	{{ if .Site.Params.hrefTargetBlank }}
+        var index = document.getElementById("index");
+        var links = index.getElementsByTagName("a");
+
+        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+            if (links[i].hostname != window.location.hostname) {
+                links[i].target = '_blank';
+            } 
+        }
+	{{ end }}
 </script>
 
 {{ partial "custom/script.html" . }}
