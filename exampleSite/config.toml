@@ -114,6 +114,10 @@ paginate = 10
     # 站点的 LOGO
     siteLogo = "/images/t.jpg"
 
+    # 站点的创建时间
+    siteCreatedTime = "2019"
+    # 注意：请保持此格式，更改数字
+
     ######################################
     # 目录
     
@@ -131,6 +135,11 @@ paginate = 10
     
     # 是否开启（全局设置）
     enableAdjacentPost = true
+
+    ######################################
+    # 是否显示 Hugo 和 MemE 的链接
+
+    displayPoweredBy = true
 
     ######################################
     # 评论
@@ -180,3 +189,5 @@ paginate = 10
     # Baidu推送
 
     enableBaiduPush = true
+
+
