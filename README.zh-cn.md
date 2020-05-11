@@ -91,6 +91,12 @@ $ git submodule add --depth 1 https://github.com/ThemeTony/hugo-theme-tony.git t
    ~/blog $ hugo server -D
    ```
 
+### 升级
+
+```bash
+$ git submodule update --rebase --remote
+```
+
 ### 自定义
 
 查看<https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>

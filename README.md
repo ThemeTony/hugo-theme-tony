@@ -91,7 +91,13 @@ $ git git submodule add --depth 1 https://github.com/ThemeTony/hugo-theme-tony.g
    ~/blog $ hugo server -D
    ```
 
-## Customize
+### Update
+
+```bash
+$ git submodule update --rebase --remote
+```
+
+Customize
 
 See <https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
 
