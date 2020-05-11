@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+
+    {{ partial "header.html" . }}
     <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
+        {{ block "main" . }}{{ end }}
     </body>
+    {{ partial "footer.html" . }}
+
+    {{ partial "script.html" . }}
 </html>

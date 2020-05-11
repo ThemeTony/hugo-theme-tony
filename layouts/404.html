@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-    {{ partial "head.html" . }}
-
-    {{ partial "header.html" . }}
-    <body>
-        <div id="header_info">
-            <nav class="header-nav reveal error-page">
-                <a href="/" title="404 Not Found" class="header-logo nuxt-link-active" style="text-decoration:none;">
-                        404 :)
-                </a>
-                <p class="lead" style="margin-top: 0px;display:block">
-                    抱歉，你请求的内容消失嘞
-                </p>
-                <a href="/" class="nuxt-link-active">
-                    <button type="button" class="btn back-home btn-primary">
-                        Back to Home | 返回首页
-                    </button>
-                </a>
-            </nav>
-        </div>
-    </body>
-    {{ partial "footer.html" . }}
-
-    {{ partial "script.html" . }}
-</html>
+{{ define "main" }}
+    <div id="header_info">
+        <nav class="header-nav reveal error-page">
+            <a href="/" title="404 Not Found" class="header-logo nuxt-link-active" style="text-decoration:none;">
+                404 :)
+            </a>
+            <p class="lead" style="margin-top: 0px;display:block">
+                抱歉，你请求的内容消失嘞
+            </p>
+            <a href="/" class="nuxt-link-active">
+                <button type="button" class="btn back-home btn-primary">
+                    Back to Home | 返回首页
+                </button>
+            </a>
+        </nav>
+    </div>
+{{ end }}
