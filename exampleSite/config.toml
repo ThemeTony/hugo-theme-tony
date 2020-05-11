@@ -24,7 +24,7 @@ paginate = 10
 
 # author information
 [author]
-    # first name
+    # Name
     name = ""
     # Mailbox
     email = ""
