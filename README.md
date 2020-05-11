@@ -95,6 +95,12 @@ $ git git submodule add --depth 1 https://github.com/ThemeTony/hugo-theme-tony.g
 
 See <https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
 
+## ShortCode`pageLink`
+
+```
+{{< pageLink "title" "link" "bio" >}}
+```
+
 ## Archives Page
 
 ```bash

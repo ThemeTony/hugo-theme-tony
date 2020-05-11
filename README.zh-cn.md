@@ -95,6 +95,12 @@ $ git submodule add --depth 1 https://github.com/ThemeTony/hugo-theme-tony.git t
 
 查看<https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom>
 
+## 短代码`pageLink`
+
+```
+{{< pageLink "title" "link" "bio" >}}
+```
+
 ## 归档页
 
 ```bash

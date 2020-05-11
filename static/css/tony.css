@@ -1361,7 +1361,7 @@ img {
 	position:relative;
 	overflow:hidden;
 	padding:5px 30px 10px;
-	background-image:url(https://static.ouorz.com/link.png);
+	background-image:url(/images/link.png);
 	background-repeat:no-repeat;
 	background-position:100%;
 	opacity:.7;
@@ -3202,3 +3202,10 @@ input:focus {
 	margin: 0 auto;
 	background: #fff;
 }
+
+@media screen and (max-width: 768px){
+    .header-div2{
+        display: none;
+    }
+}
+
