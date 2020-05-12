@@ -24,23 +24,23 @@ paginate = 10
 
 # author information
 [author]
-    # Name
-    name = ""
-    # Mailbox
-    email = ""
-    # Motto or introduction
-    motto = ""
-    # Avatar
-    avatar = "/images/t.jpg"
-    # Website (default: baseURL)
-    website = "https://themetony.github.io/hugo-theme-tony/"
-    # GitHub
-    github = ""
+    # Name
+    name = ""
+    # Mailbox
+    email = ""
+    # Motto or introduction
+    motto = ""
+    # Avatar
+    avatar = "/images/t.jpg"
+    # Website (default: baseURL)
+    website = "https://themetony.github.io/hugo-theme-tony/"
+    # GitHub
+    github = ""
 
 # Page category
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+  category = "categories"
+  tag = "tags"
 
 ########################################
 # Menu configuration
@@ -51,147 +51,147 @@ paginate = 10
 # weight
 
 [menu]
-    # Menu Bar
-    [[menu.main]]
-        url = "/"
-        name = "Home"
-        weight = 1
-    [[menu.main]]
-        url = "/about/"
-        name = "About"
-        weight = 2
+    # Menu Bar
+    [[menu.main]]
+        url = "/"
+        name = "Home"
+        weight = 1
+    [[menu.main]]
+        url = "/about/"
+        name = "About"
+        weight = 2
 
 [[params.pinned]]
-    title = "HUGO-THEME-TONY"
-    name = "HUGO-THEME-TONY"
-    icon = "ri-code-box-line"
-    url = "https://htony.js.org/"
+    title = "HUGO-THEME-TONY"
+    name = "HUGO-THEME-TONY"
+    icon = "ri-code-box-line"
+    url = "https://htony.js.org/"
 
 # Markdown renderer
 [markup]
-    defaultMarkdownHandler = "goldmark"
-    [markup.goldmark]
-        [markup.goldmark.extensions]
-            definitionList = true
-            footnote = true
-            linkify = true
-            strikethrough = true
-            table = true
-            taskList = true
-            typographer = false
-        [markup.goldmark.parser]
-            attribute = true
-            autoHeadingID = true
-            autoHeadingIDType = "github"
-        [markup.goldmark.renderer]
-            hardWraps = false
-            unsafe = true
-            xHTML = false
-    [markup.tableOfContents]
-        startLevel = 2
-        endLevel = 6
-        ordered = true
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = false
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = true
 
 # Hugo output control
 [outputs]
-    page = ["HTML"]
-    home = ["HTML"]
-    section = ["HTML"]
-    # Category
-    taxonomyTerm = ["HTML"]
-    # Category item
-    taxonomy = ["HTML"]
-    # Description: https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+    page = ["HTML"]
+    home = ["HTML"]
+    section = ["HTML"]
+    # Category
+    taxonomyTerm = ["HTML"]
+    # Category item
+    taxonomy = ["HTML"]
+    # Description: https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
 
 ########################################
 # Theme configuration
 
 [params]
 
-    #####################################
-    # Site Information
+    #####################################
+    # Site Information
 
-    # Site LOGO
-    siteLogo = "/images/t.jpg"
+    # Site LOGO
+    siteLogo = "/images/t.jpg"
 
-    # Site creation time
-    siteCreatedTime = "2019"
-    # Note: Please keep this format and change the number
+    # Site creation time
+    siteCreatedTime = "2019"
+    # Note: Please keep this format and change the number
 
-    #####################################
-    # table of Contents
-    
-    # Whether to open (global settings)
-    enableToc = true
+    #####################################
+    # table of Contents
+    
+    # Whether to open (global settings)
+    enableToc = true
 
-    #####################################
-    # Reading progress bar
-    
-    # Whether to open (global settings)
-    enableReadingBar = true
+    #####################################
+    # Reading progress bar
+    
+    # Whether to open (global settings)
+    enableReadingBar = true
 
-    #####################################
-    # Article up and down page
-    
-    # Whether to open (global settings)
-    enableAdjacentPost = true
+    #####################################
+    # Article up and down page
+    
+    # Whether to open (global settings)
+    enableAdjacentPost = true
 
-    #####################################
-    # Whether to show the link between Hugo and Tony
+    #####################################
+    # Whether to show the link between Hugo and Tony
 
-    displayPoweredBy = true
+    displayPoweredBy = true
 
-    #####################################
-    # Markdown Related
+    #####################################
+    # Markdown Related
 
-    # Open link in new tab page?
-    hrefTargetBlank = true
+    # Open link in new tab page?
+    hrefTargetBlank = true
 
-    #####################################
-    # Comments
+    #####################################
+    # Comments
 
-    # Whether to open (global settings)
-    enableComments = false
-    # Description: "comments" in the front Matter of the article
-    # Has priority over here
+    # Whether to open (global settings)
+    enableComments = false
+    # Description: "comments" in the front Matter of the article
+    # Has priority over here
 
-    ## Valine
-    enableValine = false
-    valineVersion = "latest"
-    valineAppId = ""
-    valineAppKey = ""
-    valinePlaceholder = ""
-    valinePath = ""
-    valineAvatar = "mm"
-    valineMeta = ["nick", "mail", "link"]
-    valinePageSize = 15
-    valineVisitor = true
-    valineHighlight = true
-    avatarForce = true
-    valineRecordIP = true
-    valineServerURLs = ""
-    valineEnableQQ = false
-    valineRequiredFields = []
-    # Description: https://valine.js.org/
+    ## Valine
+    enableValine = false
+    valineVersion = "latest"
+    valineAppId = ""
+    valineAppKey = ""
+    valinePlaceholder = ""
+    valinePath = ""
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 15
+    valineVisitor = true
+    valineHighlight = true
+    avatarForce = true
+    valineRecordIP = true
+    valineServerURLs = ""
+    valineEnableQQ = false
+    valineRequiredFields = []
+    # Description: https://valine.js.org/
 
-    #####################################
-    # Google Analytics
+    #####################################
+    # Google Analytics
 
-    enableGoogleAnalytics = false
+    enableGoogleAnalytics = false
 
-    # Type of tracking code
-    trackingCodeType = ""
-    # Description: gtag or analytics
+    # Type of tracking code
+    trackingCodeType = ""
+    # Description: gtag or analytics
 
-    trackingID = ""
+    trackingID = ""
 
-    #####################################
-    # Google Site Verification
+    #####################################
+    # Google Site Verification
 
-    googleSiteVerification = ""
+    googleSiteVerification = ""
 
 
-    #####################################
-    # Baidu push
+    #####################################
+    # Baidu push
 
-    enableBaiduPush = true
+    enableBaiduPush = true
