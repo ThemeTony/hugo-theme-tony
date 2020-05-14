@@ -5,6 +5,7 @@
 baseURL = "http://example.com/"
 title = "HUGO-THEME-TONY"
 languageCode = "zh-CN"
+defaultContentLanguage = "zh"
 hasCJKLanguage = true
 
 # 主题选择

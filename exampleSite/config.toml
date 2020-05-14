@@ -5,6 +5,7 @@
 baseURL = "http://example.com/"
 title = "HUGO-THEME-TONY"
 languageCode = "en"
+defaultContentLanguage = "en"
 hasCJKLanguage = false
 
 # Theme selection
