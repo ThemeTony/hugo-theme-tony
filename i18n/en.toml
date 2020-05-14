@@ -1,0 +1,14 @@
+[prevPage]
+other = "Newer"
+
+[nextPage]
+other = "Older"
+
+[postToc]
+other = "TOC"
+
+[postTags]
+other = "Tags"
+
+[backToHome]
+other = "Back To Home"

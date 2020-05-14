@@ -1,0 +1,14 @@
+[prevPage]
+other = "上一篇"
+
+[nextPage]
+other = "下一篇"
+
+[postToc]
+other = "文章引索"
+
+[postTags]
+other = "文章标签"
+
+[backToHome]
+other = "回到主页"
