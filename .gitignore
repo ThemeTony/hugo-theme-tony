@@ -1,2 +1,6 @@
 .idea
-public
+public/
+deploysrc.bat
+rebase.bat
+deploy.vbe
+deploy.bat
