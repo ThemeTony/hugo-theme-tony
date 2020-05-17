@@ -9,7 +9,7 @@ install:
 
 branches:
     only:
-        - site-source
+        - sitesource
 
 script:
     - npm run build
