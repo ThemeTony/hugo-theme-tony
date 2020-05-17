@@ -9,28 +9,18 @@ install:
 
 branches:
     only:
-        - sitesource
+        - site-source
 
 script:
-    - npm run build
-    - dir
+    - hugo --gc --minify --cleanDestinationDir
 
 after_success:
     - git config --global user.name "FFRaycoder"
     - git config --global user.email "nn_201312@163.com"
-    - git clone https://${GH_TOKEN}@github.com/FFRaycoder/blog-built.git container
-    - git clone https://${GH_TOKEN}@github.com/FFRaycoder/ffraycoder.github.io.git container2
+    - git clone https://${GH_TOKEN}@github.com/ThemeTony/hugo-theme-tony.git container
     - rm -rf container/*
-    - rm -rf container2/*
     - cp -r public/* container
-    - cp -r public/* container2
     - cd container
-    - mv Robots.txt robots.txt
     - git add -A
-    - git commit -m 'Travis update blog'
-    - git push -u origin master -f
-    - cd container2
-    - mv Robots.txt robots.txt
-    - git add -A
-    - git commit -m 'Travis update blog'
-    - git push -u origin master -f
+    - git commit -m 'Travis update demo site'
+    - git push -u origin gh-pages -f
