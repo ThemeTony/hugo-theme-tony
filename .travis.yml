@@ -17,10 +17,11 @@ script:
 after_success:
     - git config --global user.name "FFRaycoder"
     - git config --global user.email "nn_201312@163.com"
-    - git clone https://${GH_TOKEN}@github.com/ThemeTony/hugo-theme-tony.git container
-    - rm -rf container/*
-    - cp -r public/* container
-    - cd container
+    - cd public
+    - git init
+    - git remote add origin https://${GH_TOKEN}@github.com/ThemeTony/hugo-theme-tony.git
     - git add -A
     - git commit -m 'Travis update demo site'
+    - git branch gh-pages
+    - git checkout gh-pages
     - git push -u origin gh-pages -f
