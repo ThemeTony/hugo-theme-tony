@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{ hugo.Generator }}
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Avoid Automatic Format Detection -->
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    <!-- Avoid Transcoding -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <!-- Avoid Baidu Mobile Search Transcoding -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!-- CSS -->
+    {{- partial "style.html" . }}
+
+    <link rel="shortcut icon" href="{{ $.Site.Params.siteLogo | relURL }}" type="image/x-icon" />
+    <title>{{ .Title }}</title>
+
+    <meta name="author" content="{{ .Params.author | default .Site.Author.name }}" />
+    {{- $description := .Description | default .Site.Params.siteDescription | plainify -}}
+    <meta name="description" content="{{ $description }}" />
+
+    {{- with .Site.Params.googleSiteVerification }}
+        <meta name="google-site-verification" content="{{ . }}" />
+    {{- end }}
+    
+    {{- if .Site.Params.enableGoogleAnalytics }}
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+
+        {{ partial "third-party/google-analytics.html" . }}
+    {{- end }}
+
+    <!-- SEO -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{- $Deliver := . -}}
+
+    {{ partial "custom/head.html" . }}
+
+    {{ partial "third-party/highlightjs.html" . }}
+</head>

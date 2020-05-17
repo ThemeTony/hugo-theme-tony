@@ -1,0 +1,63 @@
+{{ if .Params.Categories }}
+    {{ if not .Params.buy }}
+        {{ if .Params.categoryLink }}
+            <div>
+                <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
+                    <b>{{ delimit .Params.Categories " | " }}</b>
+                </a>
+            </div>
+        {{ else }}
+            <div>
+                <em class="article-list-type1">
+                    <b>{{ delimit .Params.Categories " | " }}</b>
+                </em>
+            </div>
+        {{ end }}
+    {{ else }}
+        <div>
+            <div class="buy-list-item">
+                <div class="buy-left-img-noborder">
+                    <img src="{{ .Params.buyImage }}">
+                </div>
+                <div class="buy-right-info">
+                    <div>
+                        <a href="{{ .Params.buyLink }}" target="_blank">
+                            <h3>
+                                {{ .Params.buyName }}
+                            </h3>
+                        </a>
+                        <p>
+                            {{ .Params.buyInfo }}
+                       </p>
+                   </div>
+                   <div>
+                        <a href="{{ .Params.buyLink }}" target="_blank">
+                            {{ .Params.buyButtonText }}
+                            <span>
+                                <i class="ri-arrow-right-up-line">
+                                </i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
+<div>
+    {{ if not (.Params.noclick) }}
+        <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
+            <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
+        </a>
+        <p>{{ .Summary }}...</p>
+    {{ else }}
+        <p>{{ .Content }}</p>
+    {{ end }}
+    <div class="article-list-footer">
+        {{ if .Params.buy }}
+            <a class="article-list-date" style="margin: 0px;">{{ delimit .Params.Categories " | " }}</a>
+            <span class="article-list-divider">-</span>
+        {{ end }}
+        <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
+    </div>
+</div>

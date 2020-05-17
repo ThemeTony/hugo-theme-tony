@@ -1,0 +1,75 @@
+{{- printf `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }}
+<!-- Reference: https://tools.ietf.org/html/rfc4287 -->
+<!-- Reference: https://github.com/kaushalmodi/hugo-atom-feed/blob/master/layouts/_default/list.atom.xml -->
+<!-- Reference: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml -->
+{{- $pages := .Site.RegularPages -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ .Site.LanguageCode }}">
+    <title type="text">{{ .Site.Title }}</title>
+    <subtitle type="html">{{ .Site.Params.siteDescription }}</subtitle>
+    <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+    <id>{{ .Permalink }}</id>
+    <link rel="alternate" type="text/html" href="{{ .Permalink }}" />
+    {{ with .OutputFormats.Get "SectionsAtom" -}}
+        {{ printf `<link rel="self" type="%s" href="%s" />` .MediaType .Permalink | safeHTML }}
+    {{ end -}}
+    {{ with .Site.Author.name -}}
+        <author>
+            <name>{{ . }}</name>
+            <uri>{{ print `/` | absLangURL }}</uri>
+            {{ with $.Site.Author.email }}
+                <email>{{ . }}</email>
+            {{ end -}}
+        </author>
+    {{- end }}
+    <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
+    {{- range (where $pages "Section" "in" .Site.Params.mainSections) }}
+        {{ if not .Params.noclick }}
+            {{ $page := . }}
+            <entry>
+                <title type="text">{{ .Title }}</title>
+                <link rel="alternate" type="text/html" href="{{ .Permalink }}" />
+                <id>{{ .Permalink }}</id>
+                <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+                <published>{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
+
+                {{- $summary := .Description | default ($page.Scratch.Get "summary") -}}
+                {{ printf `<summary type="html"><![CDATA[%s]]></summary>` $summary | safeHTML }}
+                {{ if $.Site.Params.includeContent }}
+                    {{ printf `<content type="html"><![CDATA[%s]]></content>` .Content | safeHTML }}
+                {{ end }}
+                <!-- Sections -->
+                {{ if eq $.Site.Params.categoryBy "sections" }}
+                    {{ $.Scratch.Delete "sectionDir" }}
+                    {{ $sections := split (strings.TrimSuffix "/" .File.Dir) "/" }}
+                    {{ range $sections }}
+                        {{ $section := . }}
+                        {{ $.Scratch.Add "sectionDir" (printf `/%s` .) }}
+                        {{ with $.Site.GetPage ($.Scratch.Get "sectionDir") }}
+                            {{ if (eq .Kind "section") }}
+                                <category scheme="{{ .Permalink }}" term="{{ $section }}" label="{{ $section }}" />
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                <!-- Taxonomies -->
+                {{ with $.Site.Taxonomies }}
+                    {{ range $taxonomy, $terms := . }}
+                        {{ with $page.Param $taxonomy }}
+                            {{ range $index, $term := . }}
+                                {{ $url := urls.Parse ($term | urlize) }}
+                                {{ $path := $url.Path }}
+                                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $path) }}
+                                    <category scheme="{{ .Permalink }}" term="{{ .Title | default $term }}" label="{{ .Title | default $term }}" />
+                                {{ end }}
+                           {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </entry>
+        {{ end }}
+    {{ end }}
+</feed>

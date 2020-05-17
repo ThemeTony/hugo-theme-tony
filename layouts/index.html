@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div id="index" class="pjax-container">
+        <div class="grid grid-centered" style="max-width: 660px; padding: 0px 20px; margin-top: 80px;">
+            <div id="grid-cell" class="grid-cell">
+                {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+
+                {{ partial "components/home/header-info.html" . }}
+
+                {{ partial "components/home/article-list.html" . }}
+                    
+                {{ partial "components/home/adjacent-pages.html" (dict "paginator" $paginator) }}
+
+            </div>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,12 @@
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"></link>
+<script>
+    var $readProgress;
+	NProgress.start();
+    $(window).scroll(function () {
+        $SY = $(window).scrollTop();
+		NProgress.set($SY/($(document).height()-$(window).height()));
+        if ($SY > 0) setHeader('scroll');
+        else setHeader('fixed');
+    });
+</script>
