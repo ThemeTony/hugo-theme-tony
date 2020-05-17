@@ -1,0 +1,7 @@
+<script>
+    $(window).scroll(function () {
+        $SY = $(window).scrollTop();
+        if ($SY > 0) setHeader('scroll');
+        else setHeader('fixed');
+    });
+</script>

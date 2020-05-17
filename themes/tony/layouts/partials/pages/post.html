@@ -1,0 +1,29 @@
+<div id="post-container">
+    <div class="grid grid-centered">
+        <div id="grid-cell" class="grid-cell">
+            {{ if .Params.adjacentPost | default .Site.Params.enableAdjacentPost }}
+                <div class="single-left">
+                    {{ partial "components/post/toc.html" . }}
+                    {{ partial "components/post/adjacent-posts.html" . }}
+                </div>
+            {{ end }}
+            {{ if .Params.readingBar | default .Site.Params.enableReadingBar }}
+                <div id="reading-bar"></div>
+            {{ end }}
+            <article class="article reveal">
+                <div id="load">
+                    <div class="article-header">
+                        {{ partial "components/post/header.html" . }}
+                    </div>
+                    <div class="article-content">
+                        {{ .Content }}
+                    </div>
+                    {{ if .Params.Tags }}
+                        {{ partial "components/post/tags.html" . }}
+                    {{ end }}
+                    {{ partial "components/comments.html" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<ul class="article-list">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+        <li class="article-list-item reveal index-post-list">
+            {{ if (.Params.thumbnail) }}
+                <div class="article-list-img-else">
+                    <div class="article-list-img" style="background-image: url(&quot;{{ .Params.thumbnail }}&quot;);"></div>
+                    <div class="article-list-img-right">
+                        {{ partial "components/home/eachpost.html" . }}
+                    </div>
+                </div>
+            {{ else }}
+                {{ partial "components/home/eachpost.html" . }}
+            {{ end }}
+        </li>
+    {{ end }}
+</ul>

@@ -1,0 +1,13 @@
+{{ if .Params.comments | default .Site.Params.enableComments }}
+    {{ if or (in .Site.Params.mainSections .Section) .Params.comments }}	
+
+        <div id="article-comments" class="article-comments" style="margin-top: 50px;">
+
+            {{ if .Site.Params.enableValine }}
+                <div id="vcomments"></div>
+                {{ partial "third-party/valine.html" . }}
+            {{ end }}
+
+        </div>
+    {{ end }}
+{{ end }}

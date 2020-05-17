@@ -1,0 +1,37 @@
+{{ if .Params.toc | default .Site.Params.enableToc }}
+    
+        
+        <!-- ignore empty links with + -->
+        {{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
+        <!-- at least one header to link to -->
+        {{ if ge (len $headers) 1 }}
+            {{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
+            {{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
+            {{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
+            <div class="index-div">
+                <div class="single-index">
+                    <h4>
+                        <i class="ri-list-check-2"></i>
+                        {{ i18n "postToc" }}
+                    </h4>
+                </div>  
+                <ul id="article-index" class="index-ul">
+                    {{ range $headers }}
+                        {{ $header := . }}
+                        {{ range first 1 (findRE $re $header 1) }}
+                            {{ range findRE $renum . 1 }}
+                                {{ $next_heading := (cond (eq $h1_n 0) (sub (int .) 1 ) (int . ) ) }}
+                                {{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
+                                <a href="#{{ $anchorId }}">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;{{ $header | plainify | htmlUnescape }}
+                                    </li>
+                                </a>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+{{- end -}}

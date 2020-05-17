@@ -1,0 +1,15 @@
+{{ $paginator := .paginator }}
+{{ if or $paginator.HasPrev $paginator.HasNext }}
+    <div>
+        {{ if $paginator.HasPrev }}
+            <div id="home-prev-page-div">
+                <a href="{{ $paginator.Prev.URL }}"><button class="btn btn-light">上一页</button></a>
+            </div>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+            <div id="home-next-page-div">
+                <a href="{{ $paginator.Next.URL }}"><button class="btn btn-light">下一页</button></a>
+            </div>
+        {{ end }}
+    </div>
+{{ end }}
