@@ -1,0 +1,252 @@
+##########################################
+# 站点配置
+# 图标: https://RemixIcon.com/
+
+baseURL = "https://htony.js.org/"
+title = "HUGO-THEME-TONY"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+
+# 主题选择
+theme = "tony"
+
+# `hugo new` 新建文章自动打开的文本编辑器
+newContentEditor = "D:/Typora/Typora.exe"
+
+# 摘要的字数限制
+summaryLength = 235
+
+# 是否开启 GitHub 风格的 Emoji 书写方式
+enableEmoji = true
+
+# 每一分页的文章数
+paginate = 10
+
+# 作者信息
+[author]
+    # 名字
+    name = "ThemeTony"
+    # 邮箱
+    email = "ray@raycoder.me"
+    # 座右铭或简介
+    motto = ""
+    # 头像
+    avatar = "/images/t.jpg"
+    # 网站（默认值：baseURL）
+    website = "https://themetony.github.io/hugo-theme-tony/"
+    # GitHub
+    github = "https://github.com/ThemeTony"
+
+# 页面分类
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+##########################################
+# 菜单配置
+
+# 菜单内的配置说明如下：
+# url           链接地址
+# name          文本（留空（""）则无）
+# weight        权重
+
+[menu]
+    # 菜单栏
+    [[menu.main]]
+        url = "/"
+        name = "首页"
+        weight = 1
+    [[menu.main]]
+        url = "/about/"
+        name = "关于"
+        weight = 2
+    [[menu.main]]
+        url = "/archives/"
+        name = "归档"
+        weight = 3
+    [[menu.main]]
+        url = "/tags/"
+        name = "标签"
+        weight = 4
+    [[menu.main]]
+        url = "/categories/"
+        name = "分类"
+        weight = 5
+    [[menu.main]]
+        url = "/links/"
+        name = "链接"
+        weight = 6
+
+[[params.pinned]]
+    title = "HUGO-THEME-TONY"
+    name = "HUGO-THEME-TONY"
+    icon = "ri-code-box-line"
+    url = "https://htony.js.org/"
+
+# Markdown 渲染器
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = false
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = true
+
+# Hugo 的输出控制
+[outputs]
+    page = ["HTML"]
+    home = ["HTML", "SectionsRSS", "SectionsAtom"]
+    section = ["HTML"]
+    # 类别
+    taxonomyTerm = ["HTML"]
+    # 类别项
+    taxonomy = ["HTML"]
+    # 说明：https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+
+# Atom 文件格式的媒体类型
+[mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+# Tony 主题自定义的 Atom 模板 来自MemE
+[outputFormats.SectionsAtom]
+    mediaType = "application/atom+xml"
+    baseName = "atom"
+
+# Tony 主题自定义的 RSS 模板 来自MemE
+[outputFormats.SectionsRSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+
+# RSS & Atom 文章数限制
+[services.rss]
+    limit = -1
+
+##########################################
+# 主题配置
+
+[params]
+
+    ######################################
+    # 站点信息
+
+    # 站点的 LOGO
+    siteLogo = "/images/t.jpg"
+    
+    # 站点描述
+    siteDescription = "HUGO-THEME-TONY Demo站点"
+
+    ######################################
+    # 文章分区范围
+
+    # 说明：分区的名字即站点的 content 目录下
+    #      的文件夹的名字。
+
+    mainSections = ["p"]
+
+    ######################################
+    # Atom & RSS
+
+    # 是否包括全文内容
+    includeContent = true
+    # 说明：如果否，则只会包含文章的摘要。关于摘
+    #      要，Hugo 能按你设置的字数限制自动截
+    #      取，你也可以在文章中通过
+    #      `<!--more-->`（没有空格）手动控制，
+    #      或者在文章的 Front Matter 中通过
+    #      `summary` 手动指定。其中，应用的优
+    #      先级顺序：手动指定 > 手动控制 > 自
+    #      动截取。还需要注意的是，在 MemE 主
+    #      题自定义的 Atom 和 RSS 的模板中，
+    #      有一个比手动指定更高的优先级——
+    #      Front Matter 中的 `description`。
+
+    ######################################
+    # 目录
+    
+    # 是否开启（全局设置）
+    enableToc = true
+
+    ######################################
+    # 阅读进度条
+    
+    # 是否开启（全局设置）
+    enableReadingBar = true
+
+    ######################################
+    # 文章上下页
+    
+    # 是否开启（全局设置）
+    enableAdjacentPost = true
+
+    ######################################
+    # 是否显示 Hugo 和 Tony 的链接
+
+    displayPoweredBy = true
+
+    ######################################
+    # 评论
+
+    # 是否开启（全局设置）
+    enableComments = true
+    # 说明：文章的 Front Matter 中的 `comments`
+    #      的优先级高于此处
+
+    ## Valine
+    enableValine = true
+    valineVersion = "latest"
+    valineAppId = "EffViw8BjAR7CsQ63Ikp4vSy-MdYXbMMI"
+    valineAppKey = "acdRUcR1nkHEg4fYllV2XFI1"
+    valinePlaceholder = "来发评论吧~"
+    valinePath = "window.location.pathname"
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 15
+    valineVisitor = true
+    valineHighlight = true
+    avatarForce = true
+    valineRecordIP = true
+    valineServerURLs = ""
+    valineEmojiCDN = ""
+    valineEmojiMaps = """"""
+    valineEnableQQ = false
+    valineRequiredFields = ["nick", "mail"]
+    # 说明：https://valine.js.org/
+
+    ######################################
+    # Google Analytics
+
+    enableGoogleAnalytics = false
+
+    # 跟踪代码的类型
+    trackingCodeType = ""
+    # 说明：gtag 或 analytics
+
+    trackingID = ""
+
+    ######################################
+    # Google Site Verification
+
+    googleSiteVerification = ""
+
+
+    ######################################
+    # Baidu推送
+
+    enableBaiduPush = true

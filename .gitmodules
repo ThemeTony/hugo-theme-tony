@@ -1,0 +1,3 @@
+[submodule "themes/tony"]
+	path = themes/tony
+	url = https://github.com/ThemeTony/hugo-theme-tony.git
