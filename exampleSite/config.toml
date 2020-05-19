@@ -4,9 +4,9 @@
 
 baseURL = "http://example.com/"
 title = "HUGO-THEME-TONY"
-languageCode = "zh-CN"
-defaultContentLanguage = "zh"
-hasCJKLanguage = true
+languageCode = "en"
+defaultContentLanguage = "eb"
+hasCJKLanguage = false
 
 # Theme selection
 theme = "tony"
@@ -197,7 +197,7 @@ paginate = 10
     valineRecordIP = true
     valineServerURLs = ""
     valineEmojiCDN = ""
-    valineEmojiMaps = "" "" ""
+    valineEmojiMaps = """"""
     valineEnableQQ = false
     valineRequiredFields = []
     # Description: https://valine.js.org/
