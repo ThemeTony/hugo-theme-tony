@@ -58,7 +58,7 @@ paginate = 10
         name = "Home"
         weight = 1
     [[menu.main]]
-        url = "/ about /"
+        url = "/about/"
         name = "About"
         weight = 2
 
@@ -105,17 +105,17 @@ paginate = 10
     # Description: https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
 
 # Atom file format media type
-[mediaTypes. "application / atom + xml"]
+[mediaTypes."application/atom+xml"]
     suffixes = ["xml"]
 
 # Tony theme custom Atom template from MemE
 [outputFormats.SectionsAtom]
-    mediaType = "application / atom + xml"
+    mediaType = "application/atom+xml"
     baseName = "atom"
 
 # Tony theme customized RSS template from MemE
 [outputFormats.SectionsRSS]
-    mediaType = "application / rss + xml"
+    mediaType = "application/rss+xml"
     baseName = "rss"
 
 # RSS & Atom Article limit

@@ -1,5 +1,5 @@
 {{ if .Params.Categories }}
-    {{ if not .Params.buy.enable }}
+    {{ if not .Params.buy }}
         {{ if .Params.categoryLink }}
             <div>
                 <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
@@ -17,13 +17,13 @@
         <div>
             <div class="buy-list-item">
                 <div class="buy-left-img-noborder">
-                    <img src="{{ .Params.buy.image }}">
+                    <img src="{{ .Params.buyImage }}">
                 </div>
                 <div class="buy-right-info">
                     <div>
-                        <a href="{{ .Params.buy.link }}" target="_blank">
+                        <a href="{{ .Params.buyLink }}" target="_blank">
                             <h3>
-                                {{ .Params.buy.name }}
+                                {{ .Params.buyName }}
                             </h3>
                         </a>
                         <p>
@@ -31,8 +31,8 @@
                        </p>
                    </div>
                    <div>
-                        <a href="{{ .Params.buy.link }}" target="_blank">
-                            {{ .Params.buy.buttonText }}
+                        <a href="{{ .Params.buyLink }}" target="_blank">
+                            {{ .Params.buyButtonText }}
                             <span>
                                 <i class="ri-arrow-right-up-line">
                                 </i>
