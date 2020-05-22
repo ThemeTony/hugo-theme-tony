@@ -60,7 +60,7 @@ The front end is mainly made by [HelipengTony](https://github.com/HelipengTony)
 
 ### Requirements
 
-- Hugo: 0.59.1
+- Hugo: extended 0.59.1
 
 ### Installation and Usage
 
