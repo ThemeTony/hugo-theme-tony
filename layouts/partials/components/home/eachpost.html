@@ -55,7 +55,7 @@
     {{ end }}
     <div class="article-list-footer">
         {{ if .Params.buy }}
-            {{ if .Categories }}
+            {{ if .Params.Categories }}
                 <a class="article-list-date" style="margin: 0px;">{{ delimit .Params.Categories " | " }}</a>
                 <span class="article-list-divider">-</span>
             {{ end }}
