@@ -3,7 +3,7 @@
         <div class="grid grid-centered" style="max-width: 660px; padding: 0px 20px; margin-top: 80px;">
             <div id="grid-cell" class="grid-cell">
                 {{ partial "pages/taxonomy-header.html" . }}
-				<ul class="article-list">
+                <ul class="article-list">
                     <li class="article-list-item reveal index-post-list archive">
                         <div id="load">
                             <div class="article-content" style="padding-top: 10px">
@@ -11,15 +11,19 @@
                                 {{ range .Data.Terms.ByCount }}
                                     {{ $name := .Name }}
                                     {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-                                        <a href="{{ .RelPermalink }}"><button class="btn btn-light">{{ .LinkTitle | default .Data.Term | default $name }}</button></a>
+                                        <a href="{{ .RelPermalink }}">
+                                            <button class="btn btn-light btn-cate">
+                                                {{ .LinkTitle | default .Data.Term | default $name }}
+                                            </button>
+                                        </a>
                                     {{ end }}
                                 {{ end }}
                             </div>
                         </div>
                     </li>
-				</ul>
+                </ul>
             </div>
         </div>
     </div>
-	{{ partial "script.html" . }}
+    {{ partial "script.html" . }}
 </main>
