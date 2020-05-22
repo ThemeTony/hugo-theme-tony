@@ -34,9 +34,9 @@ paginate = 10
     # 头像
     avatar = "/images/t.jpg"
     # 网站（默认值：baseURL）
-    website = "https://themetony.github.io/hugo-theme-tony/"
+    website = "https://htony.js.org/"
     # GitHub
-    github = "https://github.com/ThemeTony"
+    github = "https://github.com/ThemeTony/"
 
 # 页面分类
 [taxonomies]
