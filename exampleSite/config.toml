@@ -26,17 +26,17 @@ paginate = 10
 # author information
 [author]
     # First name
-    name = ""
+    name = "HUGO-THEME-TONY"
     # Mailbox
-    email = ""
+    email = "mail@example.com"
     # Motto or introduction
-    motto = ""
+    motto = "HUGO THEME TONY"
     # Avatar
     avatar = "/images/t.jpg"
     # Website (default: baseURL)
-    website = "https://themetony.github.io/hugo-theme-tony/"
+    website = "https://htony.js.org/"
     # GitHub
-    github = ""
+    github = "https://github.com/ThemeTony/"
 
 # Page category
 [taxonomies]
