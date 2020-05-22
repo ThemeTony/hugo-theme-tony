@@ -60,7 +60,7 @@ https://github.com/ThemeTony/tony_wordpress
 
 ## 要求
 
-- Hugo: 未知
+- Hugo: 拓展版
 
 ## 下载和使用
 

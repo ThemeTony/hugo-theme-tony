@@ -71,7 +71,7 @@ https://github.com/ThemeTony/tony_wordpress
 
 ## 要求
 
-- Hugo: 未知
+- Hugo: 拓展版
 
 ## 下载和使用
 
@@ -173,7 +173,7 @@ adjacentPost: false
 |                          `keywords`                          |        文章关键词，用于HTML头部        |                   `keywords: ["移植主题"]`                   |
 |                         `categories`                         |             分类（未完成）             |                    `categories: ["博客"]`                    |
 |                            `tags`                            |             标签（未完成）             |                       `tags: ["博客"]`                       |
-|                          `noclick`                           | 不允许点击（类似碎碎念），仅在主页展示 |                      `notclick: false`                       |
+|                           `status`                           | 不允许点击（类似碎碎念），仅在主页展示 |                       `status: false`                        |
 |                        `categoryLink`                        |          分类按钮点击时的链接          |                     `categoryLink: "/"`                      |
 |                            `toc`                             |              是否开启目录              |                         `toc: true`                          |
 | `buy: false`<br/>`buyLink: ""`<br/>`buyName: ""`<br/>`buyInfo: ""`<br/>`buyImage: ""`<br/>`buyButtonText: ""` |                购物链接                | `buyLink: "https://htony.js.org"`<br/>`buyName: "hugo-theme-tony"<br/>``buyInfo: "WP-Theme-Tony的hugo移植版"`<br/>`buyImage: "/images/t.jpg"`<br/>`buyButtonText: "官网"` |
