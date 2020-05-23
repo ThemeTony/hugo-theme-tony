@@ -142,7 +142,7 @@ paginate = 10
     # Description: The name of the partition is the content directory of the site
     # The name of the folder.
 
-    mainSections = ["p"]
+    mainSections = ["posts"]
 
     #####################################
     # table of Contents

@@ -142,7 +142,7 @@ paginate = 10
     # 说明：分区的名字即站点的 content 目录下
     #      的文件夹的名字。
 
-    mainSections = ["p"]
+    mainSections = ["posts"]
 
     ######################################
     # 目录
