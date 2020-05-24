@@ -88,6 +88,12 @@ paginate = 10
             hardWraps = false
             unsafe = true
             xHTML = false
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        lineNos = false
+        lineNumbersInTable = false
+        noClasses = false
     [markup.tableOfContents]
         startLevel = 2
         endLevel = 6
