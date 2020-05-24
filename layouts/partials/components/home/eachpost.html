@@ -1,4 +1,4 @@
-{{ if .Params.Categories }}
+{{ if or (.Params.Categories) (.Params.statusCate) }}
     {{ if .Params.buy }}
         <div>
             <div class="buy-list-item">
@@ -44,7 +44,7 @@
     {{ end }}
 {{ end }}
 <div>
-    {{ if not (.Params.status) }}
+    {{ if not .Params.status }}
         <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
             <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
         </a>
