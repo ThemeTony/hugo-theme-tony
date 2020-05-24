@@ -26,15 +26,15 @@ paginate = 10
 # author information
 [author]
     # First name
-    name = ""
+    name = "HUGO-THEME-TONY"
     # Mailbox
-    email = ""
+    email = "mail@example.com"
     # Motto or introduction
-    motto = ""
+    motto = "HUGO THEME TONY"
     # Avatar
     avatar = "/images/t.jpg"
     # Website (default: baseURL)
-    website = ""
+    website = "/"
     # GitHub
     github = ""
 
@@ -66,7 +66,7 @@ paginate = 10
     title = "HUGO-THEME-TONY"
     name = "HUGO-THEME-TONY"
     icon = "ri-code-box-line"
-    url = "https://htony.js.org/"
+    url = ""
 
 # Markdown renderer
 [markup]

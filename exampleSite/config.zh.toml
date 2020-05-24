@@ -34,9 +34,9 @@ paginate = 10
     # 头像
     avatar = "/images/t.jpg"
     # 网站（默认值：baseURL）
-    website = "https://htony.js.org/"
+    website = "/"
     # GitHub
-    github = "https://github.com/ThemeTony/"
+    github = "
 
 # 页面分类
 [taxonomies]
@@ -66,7 +66,7 @@ paginate = 10
     title = "HUGO-THEME-TONY"
     name = "HUGO-THEME-TONY"
     icon = "ri-code-box-line"
-    url = "https://htony.js.org/"
+    url = "/"
 
 # Markdown 渲染器
 [markup]
