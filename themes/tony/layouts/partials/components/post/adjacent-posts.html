@@ -3,7 +3,7 @@
 {{ $prev := .Scratch.Get "prev" }}
 {{ $next := .Scratch.Get "next" }}
 {{ if or $prev $next }}
-    {{ if and $next (not $next.Params.notclick) }}
+    {{ if and $next (not $next.Params.status) }}
         <div>
             <div class="index-div-prev">
                 <h4>{{ i18n "prevPage" }}</h4>
@@ -13,7 +13,7 @@
             </div>
         </div>
     {{ end }}
-    {{ if and $prev (not $prev.Params.notclick) }}
+    {{ if and $prev (not $prev.Params.status) }}
         <div>
             <div class="index-div-next">
                 <h4>{{ i18n "nextPage" }}</h4>

@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 status: true
-categories: []
+statusCate: ""
 buy: false
 buyLink: ""
 buyName: ""

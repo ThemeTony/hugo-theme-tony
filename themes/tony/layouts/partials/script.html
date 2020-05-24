@@ -1,67 +1,19 @@
 <script src="{{ "/js/jquery.min.js" | relURL }}"></script>
+
+{{- $header := resources.Get "js/header.js" | resources.ExecuteAsTemplate (printf "%s/js/header-rendered.js" .Lang) . -}}
+{{- $homeTags := resources.Get "js/home-tags.js" | resources.ExecuteAsTemplate (printf "%s/js/home-tags-rendered.js" .Lang) . -}}
+
+{{- .Scratch.Set "script" (slice $header) -}}
+{{- .Scratch.Add "script" (slice $homeTags) -}}
+
+{{- $path := (strings.TrimPrefix "/" (printf `%s/js/tony.js` .Site.LanguagePrefix)) -}}
+{{- $script := .Scratch.Get "script" | resources.Concat $path | resources.Minify | resources.Fingerprint -}}
+{{- printf `<script src="%s" integrity="%s"></script>` $script.RelPermalink $script.Data.Integrity | safeHTML -}}
+
 {{ partial "third-party/medium-zoom.html" . }}
 
 {{ if .Site.Params.enableBaiduPush }}
     {{ partial "third-party/baidu-push.html" . }}
 {{ end }}
-<script>
-    var $header = $('#header-div'),
-        $readingBar = $('#reading-bar'),
-        $SY = $(window).scrollTop();
-    function setHeader(type) {
-        $header.attr('class','tony-header-' + type);
-    }
-    $(window).scroll(function () {
-        $SY = $(window).scrollTop();
-        if ($readingBar) {
-            $readingBar.attr('style', 'width: ' + $(document).scrollTop()/($(document).height()-$(window).height())*100 + '%');
-        }
-        if ($SY > 0) setHeader('scroll');
-        else setHeader('fixed');
-    });
-    $header.hover(function () {
-        setHeader('scroll');
-    });
-    $header.mouseout(function () {
-        if($SY === 0) setHeader('fixed');
-    });
-    /////////////////////////////////////////////////
-    var $tsl = $('#tags-scroll-left'),
-        $tsr = $('#tags-scroll-right'),
-        $tags = $('#post_tags .cat-real');
-    var deg = 0, tagsWidth = 0;
-    for(let i = 0;i < $tags.length;i++){
-        tagsWidth += $tags[i].scrollWidth;
-    }
-    function tagsTransform(d) {
-        deg += d;
-        $tags.each(function(){
-            $(this).attr('style','transform:translateX('+ deg + 'px)');
-        });
-    }
-    $tsl.click(function () {
-        if (deg < 0) tagsTransform(60);
-    });
-    $tsr.click(function(){
-        if (deg >= -tagsWidth-36) tagsTransform(-60);
-        if(deg < -tagsWidth-36) {
-            deg = -tagsWidth-36;
-            $tags.each(function(){
-                $(this).attr('style','transform:translateX('+ deg + 'px)');
-            });
-        }
-    });
-	{{ if .Site.Params.hrefTargetBlank }}
-        var index = document.getElementById("index");
-        var links = index.getElementsByTagName("a");
-
-        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-            if (links[i].hostname != window.location.hostname) {
-                links[i].target = '_blank';
-            } 
-        }
-	{{ end }}
-	
-</script>
 
 {{ partial "custom/script.html" . }}

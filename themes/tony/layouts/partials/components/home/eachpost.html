@@ -1,19 +1,5 @@
-{{ if .Params.Categories }}
-    {{ if not (or .Params.buy .Params.status) }}
-        {{ if .Params.categoryLink }}
-            <div>
-                <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
-                    <b>{{ delimit .Params.Categories " | " }}</b>
-                </a>
-            </div>
-        {{ else }}
-            <div>
-                <em class="article-list-type1">
-                    <b>{{ delimit .Params.Categories " | " }}</b>
-                </em>
-            </div>
-        {{ end }}
-    {{ else }}
+{{ if or (.Params.Categories) (.Params.statusCate) }}
+    {{ if .Params.buy }}
         <div>
             <div class="buy-list-item">
                 <div class="buy-left-img-noborder">
@@ -42,10 +28,25 @@
                 </div>
             </div>
         </div>
+        {{ if not .Params.status }}
+            {{ if .Params.categoryLink }}
+                <div>
+                    <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
+                        <b>{{ delimit .Params.Categories " | " }}</b>
+                    </a>
+                </div>
+            {{ else }}
+                <div>
+                    <em class="article-list-type1">
+                        <b>{{ delimit .Params.Categories " | " }}</b>
+                    </em>
+                </div>
+            {{ end }}
+        {{ end }}
     {{ end }}
 {{ end }}
 <div>
-    {{ if not (.Params.status) }}
+    {{ if not .Params.status }}
         <a href="{{ .Permalink | relURL }}" class="" style="text-decoration: none;">
             <h5 style="margin: 15px 0px 0px; padding: 0px;">{{.Title}}</h5>
         </a>
@@ -60,7 +61,8 @@
                 <span class="article-list-divider">-</span>
                 <a class="article-list-date" style="margin: 0px;">{{ delimit .Params.Categories " | " }}</a>
             {{ end }}
-        {{ else if .Params.status}}
+        {{ end }}
+        {{ if .Params.status}}
             <span class="article-list-divider">-</span>
             <span class="article-list-minutes">
                 <i class="ri-contrast-2-line"></i>
