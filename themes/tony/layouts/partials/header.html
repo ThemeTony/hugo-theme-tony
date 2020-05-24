@@ -1,8 +1,8 @@
 <header id="header-div" class="tony-header-fixed">
 
     <div class="header-div1">
-        <a href="{{ $.Site.BaseURL }}" style="display:inline-block;">
-            <img src="{{ $.Site.Params.siteLogo | relURL}}">
+        <a href="{{ .Site.BaseURL }}" style="display:inline-block;">
+            <img src="{{ .Site.Params.siteLogo | relURL}}">
         </a>
     </div>
     {{ partial "menu.html" . }}
