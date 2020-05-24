@@ -34,7 +34,7 @@
                     <b>{{ delimit .Params.Categories " | " }}</b>
                 </a>
             </div>
-        {{ else }}
+        {{ else if not .Params.statusCate }}
             <div>
                 <em class="article-list-type1">
                     <b>{{ delimit .Params.Categories " | " }}</b>
