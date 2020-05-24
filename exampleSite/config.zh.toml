@@ -151,6 +151,15 @@ paginate = 10
     mainSections = []
 
     ######################################
+    # 版权保护
+    
+    # 是否开启
+    enableCopyright = true
+
+    copyrightName = "CC BY-NC 4.0"
+    copyrightLink = "https://creativecommons.org/licenses/by-nc/4.0/"
+
+    ######################################
     # 目录
     
     # 是否开启（全局设置）

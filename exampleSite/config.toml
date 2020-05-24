@@ -151,6 +151,15 @@ paginate = 10
     mainSections = []
 
     #####################################
+    # Copyright Protection
+
+    # Whether to open
+    enableCopyright = true
+
+    copyrightName = "CC BY-NC 4.0"
+    copyrightLink = "https://creativecommons.org/licenses/by-nc/4.0/"
+
+    #####################################
     # table of Contents
     
     # Whether to open (global settings)

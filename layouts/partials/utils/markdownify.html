@@ -1,0 +1,46 @@
+{{- $Deliver := .Deliver -}}
+{{- $raw := .raw -}}
+{{- $isContent := .isContent -}}
+
+{{- $Deliver.Scratch.Set "Content" $raw -}}
+
+{{- $enableEmoji := replaceRE `enableEmoji = (.+)` `$1` (delimit (readFile "config.toml" | findRE `enableEmoji = (.+)` | uniq) " ") -}}
+
+<!-- New Markdown Syntax: Emphasis Point `..text..` -->
+{{- $Content := $Deliver.Scratch.Get "Content" -}}
+{{- if $Deliver.Site.Params.enableEmphasisPoint -}}
+    {{- $regexPatternEmphasisPoint := `([^\.\x60])\.\.([^\.\s\n\/\\]+)\.\.([^\.\x60])` -}}
+    {{- $regexReplacementEmphasisPoint := `$1<em class="emphasis-point">$2</em>$3` -}}
+    {{- $Content := $Content | replaceRE $regexPatternEmphasisPoint $regexReplacementEmphasisPoint | safeHTML -}}
+    {{- $Deliver.Scratch.Set "Content" $Content -}}
+{{- end -}}
+
+<!-- Markdownify -->
+{{- $Content := $Deliver.Scratch.Get "Content" -}}
+{{- if not $isContent -}}
+    {{- $Content := $Content | markdownify -}}
+    {{- $Deliver.Scratch.Set "Content" $Content -}}
+
+    <!-- Emojify -->
+    {{- $Content := $Deliver.Scratch.Get "Content" -}}
+    {{- if eq $enableEmoji "true" -}}
+        {{- $Content := $Content | emojify -}}
+        {{- $Deliver.Scratch.Set "Content" $Content -}}
+    {{- end -}}
+{{- end -}}
+
+<!-- External Links -->
+{{- $Content := $Deliver.Scratch.Get "Content" -}}
+{{- if $Deliver.Site.Params.hrefTargetBlank -}}
+    {{- $temps := findRE `(<a href="[^"]+")` $Content | uniq -}}
+    {{- with $temps -}}
+        {{- range . -}}
+            {{- if eq (substr . 9 4) "http" -}}
+                {{- $raw := replaceRE `(<a href="[^"]+")` `$1` . -}}
+                {{- $replacement := printf `%s target="_blank" rel="noopener"` $raw -}}
+                {{- $Content := replace ($Deliver.Scratch.Get "Content") . $replacement | safeHTML -}}
+                {{- $Deliver.Scratch.Set "Content" $Content -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}

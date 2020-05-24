@@ -5,17 +5,18 @@
         </div>
     </a>
     <div class="footer reveal">
+        {{ if .Site.Params.enableCopyright }}
+            <p>
+                Copyright&nbsp;<i class="ri-copyright-line"></i>&nbsp;·&nbsp;{{ now.Format "2006" }}&nbsp;·&nbsp;{{ .Site.Author.name }}&nbsp;·&nbsp;
+                <a href="{{ .Site.Params.copyrightLink }}" target="_blank" style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;">
+                    {{ .Site.Params.copyrightName }}
+                </a>
+            </p>
+        {{ end }}
         <p>
-            Copyright&nbsp;<i class="ri-copyright-line"></i>&nbsp;·&nbsp;{{ now.Format "2006" }}&nbsp;·&nbsp;{{ .Site.Author.name }}&nbsp;·&nbsp;
-            <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"
-            style="text-decoration: none;color: inherit;font-size: 14px;font-weight: 500;">
-                CC BY-NC 4.0
-            </a>
-        </p>
-		<p>
-		    {{ if .Site.Params.displayPoweredBy }}
+            {{ if .Site.Params.displayPoweredBy }}
                 Powered by <a href="https://github.com/gohugoio/hugo">Hugo</a> | Theme is <a href="https://github.com/ThemeTony/hugo-theme-tony">Tony</a>
-			{{ end }}
+            {{ end }}
         </p>
     </div>
 </div>
