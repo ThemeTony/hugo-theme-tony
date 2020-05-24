@@ -17,7 +17,25 @@
                     </div>
                     <div class="article-content">
                         {{ .Content }}
+
                     </div>
+                    <div>
+                        <div class="buy-list-item" style="margin: 60px 10px -35px 10px;">
+                            <div class="buy-left-img-noborder">
+                                <img src="{{ .Params.buyImage }}" alt="KeyChron K2">
+                            </div>
+                            <div class="buy-right-info">
+                                <div>
+                                    <h3>{{ .Params.buyName }}</h3>
+                                    <p>{{ .Params.buyInfo }}</p>
+                                </div>
+                                <div>
+                                    <a href="{{ .Params.buyLink }}">{{ .Params.buyButtonText }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{- partial "utils/content.html" . -}}
                     {{ if .Params.Tags }}
                         {{ partial "components/post/tags.html" . }}
                     {{ end }}
