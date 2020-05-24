@@ -28,18 +28,20 @@
                 </div>
             </div>
         </div>
-        {{ if .Params.categoryLink }}
-            <div>
-                <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
-                    <b>{{ delimit .Params.Categories " | " }}</b>
-                </a>
-            </div>
-        {{ else if not .Params.statusCate }}
-            <div>
-                <em class="article-list-type1">
-                    <b>{{ delimit .Params.Categories " | " }}</b>
-                </em>
-            </div>
+        {{ if not .Params.status }}
+            {{ if .Params.categoryLink }}
+                <div>
+                    <a href="{{ .Params.categoryLink }}" class="img-cate list-normal-tag" style="color: rgba(255, 152, 0, 0.83) !important;">
+                        <b>{{ delimit .Params.Categories " | " }}</b>
+                    </a>
+                </div>
+            {{ else }}
+                <div>
+                    <em class="article-list-type1">
+                        <b>{{ delimit .Params.Categories " | " }}</b>
+                    </em>
+                </div>
+            {{ end }}
         {{ end }}
     {{ end }}
 {{ end }}
