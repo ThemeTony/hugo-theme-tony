@@ -1,5 +1,7 @@
-<!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relURL }}">
 <link rel="stylesheet" href="{{ "/css/remixicon/remixicon.css" | relURL }}">
-{{ $styles := resources.Get "scss/tony.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+{{- $path := (strings.TrimPrefix "/" (printf `%s/css/tony.min.css` .Site.LanguagePrefix)) -}}
+{{- $options := (dict "targetPath" $path "outputStyle" "compressed") -}}
+{{- $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate (printf "%s/styles/main-rendered.scss" .Lang) . | resources.ToCSS $options | resources.Fingerprint -}}
+{{- printf `<link rel="stylesheet" href="%s" integrity="%s"/>` $style.RelPermalink $style.Data.Integrity | safeHTML -}}
