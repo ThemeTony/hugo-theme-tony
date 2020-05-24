@@ -143,14 +143,6 @@ paginate = 10
     siteDescription = ""
 
     #####################################
-    # Article partition range
-
-    # Description: The name of the partition is the content directory of the site
-    # The name of the folder.
-
-    mainSections = []
-
-    #####################################
     # Copyright Protection
 
     # Whether to open
