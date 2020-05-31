@@ -5,6 +5,7 @@ draft: false
 keywords: []
 categories: []
 tags: []
+slug: ""
 categoryLink: "/"
 toc: true
 comments: true

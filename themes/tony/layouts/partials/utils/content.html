@@ -6,8 +6,8 @@
 {{- $Content := .Scratch.Get "Content" -}}
 {{- if .Site.Params.enableCaption -}}
     {{- $captionPrefix := .Site.Params.captionPrefix -}}
-    {{- $regexPatternCaption := `(<(img|video).+) title="([^"]+)"( controls)?( />|>)(</video>)?` -}}
-    {{- $regexReplacementCaption := (printf `$1$4$5$6<p><span style="color: #808080;"> %s$3</span></p>` $captionPrefix) -}}
+    {{- $regexPatternCaption := `(<(img|video).+) title="([^"]+)"( controls)?( class=".+")?( />|>)(</video>)?` -}}
+    {{- $regexReplacementCaption := (printf `$1$4$5$6<p><span style="color: #808080;">%s $3</span></p>` $captionPrefix) -}}
     {{- $Content := $Content | replaceRE $regexPatternCaption $regexReplacementCaption | safeHTML -}}
     {{- .Scratch.Set "Content" $Content -}}
 {{- end -}}

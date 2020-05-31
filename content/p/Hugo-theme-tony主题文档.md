@@ -30,7 +30,7 @@ weight: 2
 
 ## 预览
 
-![](https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200509164101.png)
+![预览](https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200509164101.png "预览")
 
 ## 关联项目
 
