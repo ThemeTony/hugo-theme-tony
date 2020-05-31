@@ -11,7 +11,7 @@
                             {{ range .Pages.GroupByDate "2006 / 1" }}
                                 <h3>{{ .Key }}</h3>
                                 {{ range .Pages }}
-                                    {{ if not .Params.noclick }}
+                                    {{ if not .Params.status }}
                                         <div>
                                             <a href="{{ .RelPermalink }}" class="post-a">
                                                 <p>

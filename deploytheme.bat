@@ -1,6 +1,8 @@
 @echo off
+rm -rf resources
 hugo
-cp -r resources/* themes/tony/resources
+mkdir themes\tony\exampleSite\resources\_gen
+cp -r resources/_gen/assets* themes/tony/exampleSite/resources/_gen/
 cd themes/tony
 git add -A
 echo Commit: 
