@@ -1,0 +1,232 @@
+########################################
+# Site configuration
+# Icon: https://RemixIcon.com/
+
+baseURL = "http://example.com/"
+title = "HUGO-THEME-TONY"
+languageCode = "en"
+defaultContentLanguage = "en"
+hasCJKLanguage = false
+
+# Theme selection
+theme = "tony"
+
+# `hugo new` text editor for automatically opening new articles
+newContentEditor = ""
+
+# Summary word limit
+summaryLength = 235
+
+# Whether to enable GitHub style Emoji writing
+enableEmoji = true
+
+# Number of articles per page
+paginate = 10
+
+# author information
+[author]
+    # First name
+    name = "HUGO-THEME-TONY"
+    # Mailbox
+    email = "mail@example.com"
+    # Motto or introduction
+    motto = "HUGO THEME TONY"
+    # Avatar
+    avatar = "/images/t.jpg"
+    # Website (default: baseURL)
+    website = "/"
+    # GitHub
+    github = ""
+
+# Page category
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+########################################
+# Menu configuration
+
+# The configuration instructions in the menu are as follows:
+# url link address
+# name text (leave blank ("") no
+# weight
+
+[menu]
+    # Menu Bar
+    [[menu.main]]
+        url = "/"
+        name = "Home"
+        weight = 1
+    [[menu.main]]
+        url = "/about/"
+        name = "About"
+        weight = 2
+
+[[params.pinned]]
+    title = "HUGO-THEME-TONY"
+    name = "HUGO-THEME-TONY"
+    icon = "ri-code-box-line"
+    url = ""
+
+# Markdown renderer
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = false
+        [markup.goldmark.parser]
+            attribute = true
+            autoHeadingID = true
+            autoHeadingIDType = "github"
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = true
+            xHTML = false
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        lineNos = false
+        lineNumbersInTable = false
+        noClasses = false
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = true
+
+# Hugo output control
+[outputs]
+    page = ["HTML"]
+    home = ["HTML", "SectionsRSS", "SectionsAtom"]
+    section = ["HTML"]
+    # Category
+    taxonomyTerm = ["HTML"]
+    # Category item
+    taxonomy = ["HTML"]
+    # Description: https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+
+# Atom file format media type
+[mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+# Tony theme custom Atom template from MemE
+[outputFormats.SectionsAtom]
+    mediaType = "application/atom+xml"
+    baseName = "atom"
+
+# Tony theme customized RSS template from MemE
+[outputFormats.SectionsRSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+
+# RSS & Atom Article limit
+[services.rss]
+    limit = -1
+
+########################################
+# Theme configuration
+
+[params]
+
+    #####################################
+    # Site Information
+
+    # Site LOGO
+    siteLogo = "/images/t.jpg"
+    
+    # Site description
+    siteDescription = ""
+
+    #####################################
+    # Copyright Protection
+
+    # Whether to open
+    enableCopyright = true
+
+    copyrightName = "CC BY-NC 4.0"
+    copyrightLink = "https://creativecommons.org/licenses/by-nc/4.0/"
+
+    #####################################
+    # table of Contents
+    
+    # Whether to open (global settings)
+    enableToc = true
+
+    #####################################
+    # Reading progress bar
+    
+    # Whether to open (global settings)
+    enableReadingBar = true
+
+    #####################################
+    # Article up and down page
+    
+    # Whether to open (global settings)
+    enableAdjacentPost = true
+
+    #####################################
+    # Whether to show the link between Hugo and Tony
+
+    displayPoweredBy = true
+
+    #####################################
+    # Markdown Related
+
+    # Open link in new tab page?
+    hrefTargetBlank = true
+
+    #####################################
+    # Comments
+
+    # Whether to open (global settings)
+    enableComments = false
+    # Description: "comments" in the front Matter of the article
+    # Has priority over here
+
+    ## Valine
+    enableValine = false
+    valineVersion = "latest"
+    valineAppId = ""
+    valineAppKey = ""
+    valinePlaceholder = ""
+    valinePath = ""
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 15
+    valineVisitor = true
+    valineHighlight = true
+    avatarForce = true
+    valineRecordIP = true
+    valineServerURLs = ""
+    valineEmojiCDN = ""
+    valineEmojiMaps = """"""
+    valineEnableQQ = false
+    valineRequiredFields = []
+    # Description: https://valine.js.org/
+
+    #####################################
+    # Google Analytics
+
+    enableGoogleAnalytics = false
+
+    # Type of tracking code
+    trackingCodeType = ""
+    # Description: gtag or analytics
+
+    trackingID = ""
+
+    #####################################
+    # Google Site Verification
+
+    googleSiteVerification = ""
+
+
+    #####################################
+    # Baidu push
+
+    enableBaiduPush = true
