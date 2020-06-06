@@ -136,8 +136,8 @@ adjacentPost: false
 |                             date                             |              文章发布日期              |               date: 2020-05-07T09:51:27+08:00                |
 |                            draft                             |                是否草稿                |                         draft: false                         |
 |                           keywords                           |        文章关键词，用于HTML头部        |                    keywords: ["移植主题"]                    |
-|                          categories                          |             分类（未完成）             |                     categories: ["博客"]                     |
-|                             tags                             |             标签（未完成）             |                        tags: ["博客"]                        |
+|                          categories                          |                  分类                  |                     categories: ["博客"]                     |
+|                             tags                             |                  标签                  |                        tags: ["博客"]                        |
 |                           noclick                            | 不允许点击（类似碎碎念），仅在主页展示 |                       notclick: false                        |
 |                         categoryLink                         |          分类按钮点击时的链接          |                      categoryLink: "/"                       |
 |                             toc                              |              是否开启目录              |                          toc: true                           |
