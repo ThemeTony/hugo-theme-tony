@@ -95,7 +95,7 @@ paginate = 10
         lineNoStart = 1
         lineNos = false
         lineNumbersInTable = true
-        noClasses = false
+        noClasses = true
         style = "monokai"
         tabWidth = 4
     [markup.tableOfContents]
