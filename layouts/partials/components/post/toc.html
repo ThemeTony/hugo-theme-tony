@@ -16,7 +16,21 @@
                     </h4>
                 </div>  
                 <ul id="article-index" class="index-ul">
-                    {{ .TableOfContents }}
+                    {{ range $headers }}
+                        {{ $header := . }}
+                        {{ range first 1 (findRE $re $header 1) }}
+                            {{ range findRE $renum . 1 }}
+                                {{ $next_heading := (cond (eq $h1_n 0) (sub (int .) 1 ) (int . ) ) }}
+                                {{ $anchorId :=  (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
+                                <a href="#{{ $anchorId }}">
+                                    <li style="padding-left:23px" class="">
+                                        <i class="ri-checkbox-blank-circle-line"></i>
+                                        &nbsp;&nbsp;{{ $header | plainify | htmlUnescape }}
+                                    </li>
+                                </a>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
                 </ul>
             </div>
         {{ end }}
