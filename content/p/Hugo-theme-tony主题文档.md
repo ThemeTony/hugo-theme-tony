@@ -171,8 +171,8 @@ adjacentPost: false
 |                            `slug`                            |                文章链接                |              `slug: "docs-of-hugo-theme-tony"`               |
 |                           `draft`                            |                是否草稿                |                        `draft: false`                        |
 |                          `keywords`                          |        文章关键词，用于HTML头部        |                   `keywords: ["移植主题"]`                   |
-|                         `categories`                         |             分类（未完成）             |                    `categories: ["博客"]`                    |
-|                            `tags`                            |             标签（未完成）             |                       `tags: ["博客"]`                       |
+|                         `categories`                         |                  分类                  |                    `categories: ["博客"]`                    |
+|                            `tags`                            |                  标签                  |                       `tags: ["博客"]`                       |
 |                           `status`                           | 不允许点击（类似碎碎念），仅在主页展示 |                       `status: false`                        |
 |                        `categoryLink`                        |          分类按钮点击时的链接          |                     `categoryLink: "/"`                      |
 |                            `toc`                             |              是否开启目录              |                         `toc: true`                          |
@@ -180,7 +180,7 @@ adjacentPost: false
 |                         `thumbnail`                          |                 缩略图                 | `thumbnail: "https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png"` |
 |                           `weight`                           |                文章权重                |                         `weight: 2`                          |
 |                         `readingBar`                         |           是否开启阅读进度条           |                      `readingBar: true`                      |
-|                         adjacentPost                         |             是否显示上下页             |                      adjacentPost: true                      |
+|                        `adjacentPost`                        |             是否显示上下页             |                     `adjacentPost: true`                     |
 
 
 
