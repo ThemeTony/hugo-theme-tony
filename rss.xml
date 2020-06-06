@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>HUGO-THEME-TONY</title><link>https://htony.js.org/</link><description>HUGO-THEME-TONY Demo站点</description><generator>Hugo 0.71.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>ray@raycoder.me (ThemeTony)</managingEditor><webMaster>ray@raycoder.me (ThemeTony)</webMaster><lastBuildDate>Sat, 06 Jun 2020 03:12:47 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://htony.js.org/rss.xml"/><item><title>Hugo Theme Tony主题文档</title><link>https://htony.js.org/p/docs-of-hugo-theme-tony/</link><guid isPermaLink="true">https://htony.js.org/p/docs-of-hugo-theme-tony/</guid><pubDate>Thu, 07 May 2020 09:51:27 +0800</pubDate><description><![CDATA[<div align="center">
+  <h1>hugo-theme-tony</h1>
+  <p>一个使用Hugo静态网站生成器的简洁强大的博客主题</p>
+</div>
+<h2 id="预览">预览</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200509164101.png" alt="预览" title="预览"></p>
+<h2 id="关联项目">关联项目</h2>
+<p><a href="https://github.com/ThemeTony/tony_wordpress">https://github.com/ThemeTony/tony_wordpress</a></p>
+<h2 id="作者">作者</h2>
+<p>前端主要由 <a href="https://github.com/HelipengTony">HelipengTony</a> 制作
+<a href="https://github.com/FFRaycoder">FFRaycoder</a>移植</p>
+<h2 id="特性">特性</h2>
+<ul>
+<li>Medium Zoom</li>
+<li>左下个人GitHub链接</li>
+<li>外链引导</li>
+<li>Thumbnail</li>
+<li>首页标记页面</li>
+<li>阅读进度条</li>
+<li>谷歌统计</li>
+<li>百度推送</li>
+<li>使用Bootstrap作为CSS模板</li>
+<li>标签 (页)</li>
+<li>分类 (页)</li>
+<li>阅读进度条</li>
+<li>评论
+<ul>
+<li>Valine</li>
+</ul>
+</li>
+<li>Pinned Pages</li>
+<li>JQuery</li>
+<li>Remixicon <a href="https://remixicon.cn/">https://remixicon.cn/</a></li>
+<li>归档页</li>
+<li>i18n</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p><a href="https://htony.js.org/">https://htony.js.org/</a></p>
+<hr>
+<h2 id="要求">要求</h2>
+<ul>
+<li>Hugo: 拓展版</li>
+</ul>
+<h2 id="下载和使用">下载和使用</h2>
+<h3 id="下载">下载</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init
+$ git submodule add --depth <span style="color:#ae81ff">1</span> https://github.com/ThemeTony/hugo-theme-tony.git themes/tony
+</code></pre></div><h3 id="使用">使用</h3>
+<ol>
+<li>
+<p>替换config.toml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rm config.toml <span style="color:#f92672">&amp;&amp;</span> cp themes/tony/exampleSite/config.toml config.toml
+</code></pre></div></li>
+<li>
+<p>新建一篇文章和<code>about</code>页面</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new <span style="color:#e6db74">&#34;posts/hello-world.md&#34;</span>
+$ hugo new <span style="color:#e6db74">&#34;about/index.md&#34;</span>
+</code></pre></div></li>
+<li>
+<p>启动服务:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo server -D
+</code></pre></div></li>
+</ol>
+<h3 id="升级">升级</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git submodule update --rebase --remote
+</code></pre></div><h3 id="自定义">自定义</h3>
+<p>查看<a href="https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom">https://github.com/ThemeTony/hugo-theme-tony/tree/master/layouts/partials/custom</a></p>
+<hr>
+<h2 id="短代码pagelink">短代码<code>pageLink</code></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[[&lt; pageLink &#34;title&#34; &#34;link&#34; &#34;bio&#34; &gt;]]
+将 &#34;[]&#34; 用 &#34;{}&#34; 替换
+</code></pre></div><div class="warp-post-embed">
+    <a style="text-decoration: none;" href="/" target="_blank">
+        <div class="embed-content">
+            <h2>
+                hugo-theme-tony
+            </h2>
+            <p>
+                <b>
+                    简介
+                </b>
+            </p>
+        </div>
+    </a>
+</div>
+<h2 id="归档页">归档页</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new archives/_index.md
+</code></pre></div><p><code>archives/_index.md</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;Archives&#34;
+date: 2020-05-09T15:50:35+08:00
+draft: false
+type: archives
+adjacentPost: false
+---
+</code></pre></div><h2 id="友链页">友链页</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new links/_index.md
+</code></pre></div><p><code>links/_index.md</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;Links&#34;
+date: 2020-05-09T15:50:35+08:00
+draft: false
+type: links
+adjacentPost: false
+---
+</code></pre></div><p>复制<code>themes/tony/data/links.toml</code>至<code>blog/data/links.toml</code>并修改。</p>
+<h2 id="支持的front-matter">支持的<code>Front Matter</code>：</h2>
+<table>
+<thead>
+<tr>
+<th align="center">项</th>
+<th align="center">作用</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>title</code></td>
+<td align="center">文章标题</td>
+<td align="center"><code>title: &quot;Hugo Theme Tony主题文档&quot;</code></td>
+</tr>
+<tr>
+<td align="center"><code>date</code></td>
+<td align="center">文章发布日期</td>
+<td align="center"><code>date: 2020-05-07T09:51:27+08:00</code></td>
+</tr>
+<tr>
+<td align="center"><code>slug</code></td>
+<td align="center">文章链接</td>
+<td align="center"><code>slug: &quot;docs-of-hugo-theme-tony&quot;</code></td>
+</tr>
+<tr>
+<td align="center"><code>draft</code></td>
+<td align="center">是否草稿</td>
+<td align="center"><code>draft: false</code></td>
+</tr>
+<tr>
+<td align="center"><code>keywords</code></td>
+<td align="center">文章关键词，用于HTML头部</td>
+<td align="center"><code>keywords: [&quot;移植主题&quot;]</code></td>
+</tr>
+<tr>
+<td align="center"><code>categories</code></td>
+<td align="center">分类</td>
+<td align="center"><code>categories: [&quot;博客&quot;]</code></td>
+</tr>
+<tr>
+<td align="center"><code>tags</code></td>
+<td align="center">标签</td>
+<td align="center"><code>tags: [&quot;博客&quot;]</code></td>
+</tr>
+<tr>
+<td align="center"><code>status</code></td>
+<td align="center">不允许点击（类似碎碎念），仅在主页展示</td>
+<td align="center"><code>status: false</code></td>
+</tr>
+<tr>
+<td align="center"><code>categoryLink</code></td>
+<td align="center">分类按钮点击时的链接</td>
+<td align="center"><code>categoryLink: &quot;/&quot;</code></td>
+</tr>
+<tr>
+<td align="center"><code>toc</code></td>
+<td align="center">是否开启目录</td>
+<td align="center"><code>toc: true</code></td>
+</tr>
+<tr>
+<td align="center"><code>buy: false</code><br/><code>buyLink: &quot;&quot;</code><br/><code>buyName: &quot;&quot;</code><br/><code>buyInfo: &quot;&quot;</code><br/><code>buyImage: &quot;&quot;</code><br/><code>buyButtonText: &quot;&quot;</code></td>
+<td align="center">购物链接</td>
+<td align="center"><code>buyLink: &quot;https://htony.js.org&quot;</code><br/><code>buyName: &quot;hugo-theme-tony&quot;&lt;br/&gt;``buyInfo: &quot;WP-Theme-Tony的hugo移植版&quot;</code><br/><code>buyImage: &quot;/images/t.jpg&quot;</code><br/><code>buyButtonText: &quot;官网&quot;</code></td>
+</tr>
+<tr>
+<td align="center"><code>thumbnail</code></td>
+<td align="center">缩略图</td>
+<td align="center"><code>thumbnail: &quot;https://cdn.jsdelivr.net/gh/FFRaycoder/cdn/imgs/20200507094721.png&quot;</code></td>
+</tr>
+<tr>
+<td align="center"><code>weight</code></td>
+<td align="center">文章权重</td>
+<td align="center"><code>weight: 2</code></td>
+</tr>
+<tr>
+<td align="center"><code>readingBar</code></td>
+<td align="center">是否开启阅读进度条</td>
+<td align="center"><code>readingBar: true</code></td>
+</tr>
+<tr>
+<td align="center"><code>adjacentPost</code></td>
+<td align="center">是否显示上下页</td>
+<td align="center"><code>adjacentPost: true</code></td>
+</tr>
+</tbody>
+</table>]]></description><category domain="https://htony.js.org/categories/%E5%8D%9A%E5%AE%A2/">博客</category><category domain="https://htony.js.org/tags/%E5%8D%9A%E5%AE%A2/">博客</category><category domain="https://htony.js.org/tags/tony%E4%B8%BB%E9%A2%98/">Tony主题</category></item><item><title>移植主题中</title><link>https://htony.js.org/status/porting-a-theme/</link><guid isPermaLink="true">https://htony.js.org/status/porting-a-theme/</guid><pubDate>Fri, 01 May 2020 21:55:41 +0800</pubDate><description><![CDATA[<h3 id="正在移植wp-tony主题httpsgithubcomthemetonytony_wordpress断更嘿嘿">正在移植<a href="https://github.com/ThemeTony/tony_wordpress"><code>WP-Tony</code>主题</a>，断更嘿嘿</h3>
+<h3 id="感兴趣的可以去原作者博客httpsouorzcom看看">感兴趣的可以去原作者博客<a href="https://ouorz.com">https://ouorz.com</a>看看。</h3>
+]]></description><category domain="https://htony.js.org/categories/%E5%8D%9A%E5%AE%A2/">博客</category><category domain="https://htony.js.org/tags/%E5%8D%9A%E5%AE%A2/">博客</category></item></channel></rss>

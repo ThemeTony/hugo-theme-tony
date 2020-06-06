@@ -1,0 +1,5 @@
+var $header=$('#header-div'),$readingBar=$('#reading-bar'),$SY=$(window).scrollTop();function setHeader(type){$header.attr('class','tony-header-'+type);}
+$(window).scroll(function(){$SY=$(window).scrollTop();if($readingBar){$readingBar.attr('style','width: '+$(document).scrollTop()/($(document).height()-$(window).height())*100+'%');}
+if($SY>0)setHeader('scroll');else setHeader('fixed');});$header.hover(function(){setHeader('scroll');});$header.mouseout(function(){if($SY===0)setHeader('fixed');});;var $tsl=$('#tags-scroll-left'),$tsr=$('#tags-scroll-right'),$tags=$('#post_tags .cat-real'),deg=0,tagsWidth=0;for(let i=0;i<$tags.length;i++){tagsWidth+=$tags[i].scrollWidth;}
+function tagsTransform(d){deg+=d;$tags.each(function(){$(this).attr('style','transform:translateX('+deg+'px)');});}
+$tsl.click(function(){if(deg<0)tagsTransform(60);});$tsr.click(function(){if(deg>=-tagsWidth-36)tagsTransform(-60);if(deg<-tagsWidth-36){deg=-tagsWidth-36;$tags.each(function(){$(this).attr('style','transform:translateX('+deg+'px)');});}});
