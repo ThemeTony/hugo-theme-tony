@@ -8,8 +8,8 @@ Version: 2.0.1
 */
 
 @font-face {
-    font-family: Product Sans;
-    src:url({{ "/fonts/productsans.ttf" | relURL }});
+    font-family:Product Sans;
+    src:url(/fonts/productsans.ttf);
     font-display:swap
 }
 .gray-mode {

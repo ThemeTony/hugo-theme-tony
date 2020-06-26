@@ -90,14 +90,10 @@ paginate = 10
             xHTML = false
     [markup.highlight]
         codeFences = true
-        guessSyntax = true
-        hl_Lines = ""
-        lineNoStart = 1
+        guessSyntax = false
         lineNos = false
-        lineNumbersInTable = true
-        noClasses = true
-        style = "monokai"
-        tabWidth = 4
+        lineNumbersInTable = false
+        noClasses = false
     [markup.tableOfContents]
         startLevel = 2
         endLevel = 6
