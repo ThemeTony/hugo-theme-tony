@@ -4,7 +4,9 @@
       <div
         class="single-left"
       >
-        {{ partial "components/post-toc" . }}
+        {{ if findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
+          {{ partial "components/post-toc" . }}
+        {{ end }}
       </div>
       {{/* Reading Bar */}}
       <div class="reading-bar"></div>

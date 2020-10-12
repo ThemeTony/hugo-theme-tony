@@ -4,6 +4,8 @@
   other = "预计阅读时长"
 [postTags]
   other = "文章标签"
+[postToc]
+  other = "文章引索"
 [atTop]
   other = "置顶"
 [noneTag]
