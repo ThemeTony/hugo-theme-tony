@@ -1,0 +1,44 @@
+.header-div1 {
+    a {
+        button {
+            margin-top: 12px;
+            margin-left: 15px;
+            letter-spacing: 1.5px;
+        }
+    }
+}
+
+.header-div1-1 {
+    a {
+        button {
+            margin-top: 12px;
+            margin-left: 15px;
+            letter-spacing: 1.5px;
+        }
+    }
+}
+
+.header-div2 {
+    a {
+        margin-left: 15px;
+
+        button {
+            letter-spacing: 1.5px;
+        }
+
+        font-weight: 500 !important;
+
+        &:nth-child(1) {
+            margin-left: 0px;
+        }
+    }
+
+    .b-dropdown {
+        margin-left: 15px;
+        a.btn:nth-child(1){
+            padding-left: 15px;
+            letter-spacing: 2px;
+            font-weight: 600 !important;
+        }
+    }
+}

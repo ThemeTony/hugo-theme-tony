@@ -1,0 +1,115 @@
+<div class="article-list-img-else">
+  {{/* No Buy 普通文章无购买链接 */}}
+  {{ if not .Params.buy }}
+    <div
+      class="article-list-img"
+      style="background-image:url({{ .Params.postImg }})"
+    ></div>
+  {{ end }}
+  <div
+    {{ if not .Params.buy }}class="article-list-img-right"{{ end }}
+  >
+    {{/* Buy 有购买链接 */}}
+    {{ if .Params.buy }}
+      <div>
+        <div class="buy-list-item">
+          <div
+            class="
+              {{ if eq .Params.buyImgBorder "border" }}
+                buy-left-img
+              {{ else }}
+                buy-left-img-noborder
+              {{ end }}
+            "
+          >
+            <img
+              src="{{ .Params.postImg }}"
+              loading="lazy"
+              alt="{{ .Params.buyName }}"
+            />
+          </div>
+          <div class="buy-right-info">
+            <div>
+              <a
+                href="{{ .Params.buyLink }}"
+                target="_blank"
+              >
+                <h3>{{ .Params.buyName }}</h3>
+              </a>
+              <p>{{ .Params.buyDes }}</p>
+            </div>
+            <div>
+              <a
+                href="{{ .Params.buyLink }}"
+                target="_blank"
+              >
+                {{ .Params.buyLinkName }}
+                <span>
+                  <i class="ri-arrow-right-up-line"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+    <div>
+      {{ if not .Params.buy }}
+        <div>
+          {{/* Sticky Post 置顶文章提示 */}}
+          {{ if .Params.sticky }}
+            <em
+              class="article-list-type1 sticky-one-tag"
+            >
+              <i
+                class="czs-arrow-up-l"
+                style="font-size: 14px;font-weight: 600;"
+              ></i>
+              {{ T "atTop" }}
+            </em>
+          {{ end }}
+          {{ if .Params.categories }}
+            {{ $cateName := index .Params.categories 0 }}
+            {{ $path := (urls.Parse ($cateName | urlize)).Path }}
+            {{ $cate := $.Site.GetPage (printf `/categories/%s` $path) }}
+            <a
+              href="{{ $cate.RelPermalink }}"
+              class="img-cate list-normal-tag"
+              style="color: rgba(255, 152, 0, 0.83) !important;"
+            >
+              <b>{{ $cate.LinkTitle | default $path }}</b>
+               | 
+              {{ if .Params.tags }}
+                {{ upper (index .Params.tags 0) }}
+              {{ else }}
+                {{ T "noneTag" }}
+              {{ end }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+      <a
+        href="{{ .Permalink }}"
+        style="text-decoration: none;"
+      >
+        <h5
+          style="margin: 0px;padding: 0px;margin-top:15px"
+        >{{ .Title }}</h5>
+      </a>
+      <p>{{ partial "utils/summary" . }}</p>
+      <div class="article-list-footer">
+        <span class="article-list-date">{{ partial "utils/date" . }}</span>
+        {{/* 
+        <span class="article-list-divider">-</span>
+        <span
+          v-if="post.post_metas.views !== ''"
+          class="article-list-minutes"
+          >{{ post.post_metas.views }}&nbsp;Views</span
+        >
+        <span v-else class="article-list-minutes"
+          >0&nbsp;Views</span
+        > */}}
+      </div>
+    </div>
+  </div>
+</div>

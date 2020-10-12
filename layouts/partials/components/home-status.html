@@ -1,0 +1,14 @@
+<h3 class="article-list-content article-status" v-html="post.title.rendered"></h3>
+<div class="article-list-footer">
+  <span class="article-list-date">{{ partial "utils/date" . }}</span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    <i class="ri-contrast-2-line"></i>
+    {{ T "status" }} | 
+    {{ if .Params.status }}
+      {{ .Params.status }}
+    {{ else }}
+      {{ T "noneStatus" }}
+    {{ end }}
+  </span>
+</div>

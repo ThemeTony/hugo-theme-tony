@@ -1,0 +1,27 @@
+<div id="posts">
+  <div class="grid grid-centered">
+    <div class="grid-cell" id="grid-cell">
+      <div
+        class="single-left"
+      >
+        {{ partial "components/post-toc" . }}
+      </div>
+      {{/* Reading Bar */}}
+      <div class="reading-bar"></div>
+      {{/* Contents */}}
+      <article class="article reveal">
+        <div id="load">
+          {{/* Post Meta */}}
+          {{ partial "components/post-meta" . }}
+
+          {{/* Content */}}
+          <div class="article-content">{{ .Content }}</div>
+
+          {{ if .Params.tags }}
+            {{ partial "components/post-tags" . }}
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

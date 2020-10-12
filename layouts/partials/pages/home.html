@@ -1,0 +1,97 @@
+<div id="index">
+  <div
+    class="grid grid-centered"
+    style="max-width: 660px;padding: 0px 20px;margin-top: 80px"
+  >
+    <div class="grid-cell" id="grid-cell">
+      {{/* Author Info 作者信息 */}}
+      {{ partial "components/home-top-header" . }}
+      <ul class="article-list">
+        {{/* Post List 文章列表 */}}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+        {{ range $paginator.Pages }}
+          {{/* Sticky Post 置顶文章 */}}
+          <li class="article-list-item reveal index-post-list{{ if .Params.sticky }} sticky-one{{ end }}">
+            {{/* No featured image articles 没有特色图像的文章 */}}
+            {{ if and (not .Params.postImg) (not .Params.status) }}
+              {{ partial "components/home-not-featured-post" . }}
+            {{ else if and .Params.postImg (not .Params.status) }}
+              {{ partial "components/home-featured-post" . }}
+            {{ end }}
+
+            {{/*
+            
+
+            <!-- 状态类型文章 -->
+            <template
+              v-else-if="post.post_categories[0].term_id === 58 || !!post.post_metas.status"
+            >
+            </template>
+            <!-- 状态类型文章 -->
+            */}}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Tags
+    var translateX = 0;
+    var list = document.getElementById('post-tags');
+    var scrollLeftBtn = document.getElementById('tags-scroll-left');
+    var scrollRightBtn = document.getElementById('tags-scroll-right');
+    var scrollTags = function (direction) {
+      if (direction === 'right') {
+        if (translateX >= 0 && translateX < list.scrollWidth - list.clientWidth) {
+          scrollLeftBtn.setAttribute('style', null);
+          translateX += 60;
+        } else {
+          scrollRightBtn
+            .style
+            .display = 'none';
+        }
+      } else {
+        if (translateX - 60 >= 0) {
+          translateX -= 60;
+          scrollRightBtn.setAttribute('style', null);
+        } else {
+          translateX = 0;
+          scrollLeftBtn
+            .style
+            .display = 'none';
+        }
+      }
+      let k = list.children;
+      for (let i = 0; i < k.length; ++i) {
+        k[i].setAttribute(
+          'style',
+          'transform:translateX(-' + translateX + 'px)'
+        );
+      }
+    };
+    scrollLeftBtn.addEventListener('click', function () {
+      scrollTags('left')
+    });
+    scrollRightBtn.addEventListener('click', function () {
+      scrollTags('right')
+    });
+    scrollLeftBtn
+      .style
+      .display = 'none';
+    if (list.scrollWidth <= list.clientWidth)
+      scrollRightBtn
+        .style
+        .display = 'none';
+    // View Div
+    window.addEventListener("scroll", function () {
+      var viewDiv = document.getElementById('view-div');
+      if (document.documentElement.scrollTop <= 0) {
+        viewDiv.style.display = "none";
+      } else {
+        viewDiv.style.display = null;
+      }
+    });
+  }, { once: true });
+</script>

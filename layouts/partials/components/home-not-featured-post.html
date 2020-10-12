@@ -1,0 +1,62 @@
+<div class="list-show-div">
+  {{ if .Params.sticky }}
+    {{/* At top 置顶 */}}
+    <em class="article-list-type1 sticky-one-tag">
+      <i class="ri-arrow-up-circle-line"></i>
+      {{ T "atTop" }}
+    </em>
+  {{ end }}
+  <div class="article-list-tags">
+    {{/* First Category 第一个分类 */}}
+    {{ if .Params.categories }}
+      {{ with index .Params.categories 0 }}
+        {{ $cate := . }}
+        {{ $path := (urls.Parse ($cate | urlize)).Path }}
+        {{ with $.Site.GetPage (printf `/categories/%s` $path) }}
+          <a
+            class="list-normal-tag bold"
+            style="color: rgba(255, 152, 0, 0.83) !important;"
+            href="{{ .RelPermalink }}"
+          >{{ .LinkTitle | default $path }}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{/* No Tags 没有标签 */}}
+    {{ if not .Params.tags }}
+      <a
+        class="bold"
+        style="margin-left: 5px;"
+      >{{ T "noneTag" }}</a>
+    {{ else }}
+    {{/* Has Tags 有标签 */}}
+      {{/* First 2 Tags 取前2个标签 */}}
+      {{ range first 2 (after 0 .Params.tags) }}
+        <a
+          href="{{ "tags" | relURL}}/{{ . }}"
+          style="margin-left: 5px;"
+        >{{ . }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+{{/* Title 标题 */}}
+<a href="{{ .Permalink }}" style="text-decoration: none;">
+  <h5>{{ .Title }}</h5>
+</a>
+
+<p
+  class="article-list-content"
+>{{ partial "utils/summary" . }}</p>
+
+<div class="article-list-footer">
+  <span class="article-list-date">{{ partial "utils/date" . }}</span>
+  {{/* TODO: Post views count
+    <span class="article-list-divider">-</span>
+    <span
+      v-if="post.post_metas.views !== ''"
+      class="article-list-minutes"
+    >{{ post.post_metas.views }}&nbsp;Views</span>
+    <span v-else class="article-list-minutes">0&nbsp;Views</span>  
+  */}}
+</div>

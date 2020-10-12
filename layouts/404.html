@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div id="header_info">
+    <nav class="header-nav reveal error-page">
+      <a
+        href="{{ "/" | relURL }}"
+        style="text-decoration: none;"
+        class="header-logo"
+        title="404 Not Found"
+      >404 :)</a>
+      <p class="lead" style="margin-top: 0px;display:block">{{ T "404" }}</p>
+      <a to="{{ "/" | relURL }}">
+        <button class="btn back-home btn-primary">{{ T "back2home" }}</button>
+      </nuxt-link>
+    </nav>
+  </div>
+{{ end }}

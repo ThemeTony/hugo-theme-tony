@@ -1,0 +1,36 @@
+{{/* Post Tags */}}
+<div
+  style="text-align: left;margin: 60px 0px 40px 8px;border-radius: 6px;"
+>
+  <ul
+    class="post_tags"
+    style="margin: 0;padding: 0px;width: 100%;padding-bottom: 15px;"
+  >
+    <li
+      class="cat-real"
+      style="display: inline-block;color: rgb(102, 102, 102);font-size: 1.1rem;font-weight: 600;margin: 0px;letter-spacing: 1px;"
+    >
+      <a
+        style="background-color: #e7f3ff;color: #2f94fe;padding: 1px 12px 1px;border-radius: 4px;font-size: .9rem;"
+      >{{ T "postTags" }}</a>
+    </li>
+    {{ with .Params.tags }}
+      {{ range . }}
+        {{ $tag := . }}
+        {{ $path := (urls.Parse ($tag | urlize)).Path }}
+        {{ with $.Site.GetPage (printf `/tags/%s` $path) }}
+          <li
+            class="cat-real"
+            style="display: inline-block;"
+          >
+            <a
+              href="{{ .RelPermalink }}"
+              target="_blank"
+              style="font-size: .9rem;border-radius: 4px;padding: 1px 12px 1px;"
+            >{{ .LinkTitle | default $path }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>

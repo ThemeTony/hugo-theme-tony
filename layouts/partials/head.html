@@ -1,0 +1,39 @@
+<head>
+  {{/* Styles */}}
+  {{ partial "styles.html" . }}
+  <meta charset="UTF-8" />
+
+  {{/* Generator info */}}
+  {{ hugo.Generator }}
+
+  {{/* Responsive Web Design */}}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{/* Avoid Automatic Format Detection */}}
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+  {{/* Avoid Transcoding */}}
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  {{/* Avoid Baidu Mobile Search Transcoding */}}
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+  <title>{{ (partial "utils/title.html" (dict "$" . "title" .Title)).title }}</title>
+
+  {{/* Favicon */}}
+  {{ $favicon := "favicon.ico" }}
+  <link rel="shortcut icon" href="{{ $favicon | relURL }}" type="image/x-icon" />
+
+  {{/* SEO */}}
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  {{/* BootStrap */}}
+  {{ if .Site.Params.useCDN }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+  {{ end }}
+  {{/* Remix Icon */}}
+  <link rel="stylesheet" href="
+    {{ if .Site.Params.useCDN }}
+      https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css
+    {{ else }}
+      {{ "css/remixicon/remixicon.css" | relURL }}
+    {{ end }}
+  " />
+</head>

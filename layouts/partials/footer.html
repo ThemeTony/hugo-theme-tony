@@ -1,0 +1,21 @@
+{{/* Back To Top */}}
+{{ if .Site.Params.enableBackToTop }}
+  {{ partial "components/go-to-top" . }}
+{{ end }}
+
+{{/* Github Link GitHub链接 */}}
+{{ if .Site.Params.enableFooterGithubLink }}
+  {{ partial "components/github-link" . }}
+{{ end }}
+
+<div class="footer reveal">
+  <p>
+    <i class="ri-copyright-line copy-icon"></i> Copyright 2018 · {{ .Site.Author.name }}
+    {{ if .Site.Params.displayCopyright }}
+      {{ $raw := .Site.Copyright }}
+      {{ partial "utils/markdownify.html" (dict "Deliver" . "raw" $raw "isContent" false) }}
+      {{ $Content := .Scratch.Get "Content" }}
+      {{ $Content | safeHTML }}
+    {{ end }}
+  </p>
+</div>

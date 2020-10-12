@@ -1,0 +1,12 @@
+<!-- Main CSS -->
+  
+{{ $path := (strings.TrimPrefix "/" (printf `%s/css/tony.min.css` `` )) }}
+{{ $options := (dict "targetPath" $path "outputStyle" "compressed") }}
+
+{{ if .Site.Params.enableFingerprint }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate (printf "%s/styles/main-rendered.scss" "") . | resources.ToCSS $options | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+{{ else }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate (printf "%s/styles/main-rendered.scss" "") . | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ end }}

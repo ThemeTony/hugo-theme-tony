@@ -1,0 +1,60 @@
+<div id="header">
+  <header
+    class="tony-header-fixed"
+    id="header-div"
+  >
+    {{/* Content menu */}}
+    <div class="header-div1-1">
+      {{/* Avatar */}}
+      <a
+        href="{{ "/" | relURL}}"
+        style="display: inline-block;"
+      >
+        <img src="{{ .Site.Author.avatar }}">
+      </a>
+      {{ range .Site.Menus.content  }}
+        <a
+          href="{{ .URL }}"
+          {{ if eq .Pre "external" }}target="_blank"{{ end }}
+        >
+          <button
+            type="button"
+            class="btn btn-light"
+          >
+            {{ if .Post }}
+              <i class="{{ .Post }}"></i>
+            {{ end }}
+            {{ .Name }}
+          </button>
+        </a>
+      {{ end }}
+    </div>
+    {{/* Index Menu */}}
+    <div class="header-div2">
+      {{ range .Site.Menus.index  }}
+        <a
+          href="{{ .URL }}"
+          {{ if eq .Pre "external" }}target="_blank"{{ end }}
+        >
+          <button
+            type="button"
+            class="btn btn-light"
+          >
+            {{ if .Post }}
+              <i class="{{ .Post }}"></i>
+            {{ end }}
+            {{ .Name }}
+          </button>
+        </a>
+      {{ end }}
+    </div>
+  </header>
+  {{ if eq .Kind "home" }}
+    <div id="view-div" class="center-info" style="display:none">
+      <p
+        style="font-weight: 600;font-size: 1.2rem;color: #555;"
+        id="view-text"
+      >-&nbsp;{{ T "articleList" }}&nbsp;-</p>
+    </div>
+  {{ end }}
+</div>

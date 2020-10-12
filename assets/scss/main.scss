@@ -1,0 +1,23 @@
+/*
+    name: 样式表入口
+    author: TonyHe
+    update: 16-2-2020
+*/
+
+{{ if not .Site.Params.useCDN }}
+  @import "bootstrap";
+{{ end }}
+
+@import "header/nav";
+
+{{ if .Site.Params.enableBackToTop }}
+  @import "footer/go-to-top";
+{{ end }}
+
+$productSansPath: "{{ "css/product-sans.ttf" | relURL }}";
+
+@media (prefers-color-scheme: dark) {
+  @import "style_dark";
+}
+
+@import "style_light";

@@ -1,0 +1,20 @@
+[postDes]
+  other = "博客文章"
+[postEstimate]
+  other = "预计阅读时长"
+[postTags]
+  other = "文章标签"
+[atTop]
+  other = "置顶"
+[noneTag]
+  other = "无标签"
+[404]
+  other = "抱歉，你请求的内容消失嘞"
+[back2home]
+  other = "返回首页"
+[articleList]
+  other = "文章列表"
+[status]
+  other = "状态"
+[noneStatus]
+  other = "无状态"

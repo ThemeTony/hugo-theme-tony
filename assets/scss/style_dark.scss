@@ -1,0 +1,305 @@
+/*
+    name: 深色样式表
+    author: TonyHe
+    update: 16-2-2020
+*/
+
+.center-info {
+  p {
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    color: #fff !important;
+  }
+}
+
+.tony-header-scroll {
+  box-shadow: none !important;
+  background: linear-gradient(180deg, #1c1f2c, transparent) !important;
+}
+
+.header-logo {
+  color: #fff !important;
+}
+
+.lead {
+  color: #f1f2f3 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    background: #394458 !important;
+    border: none !important;
+  }
+}
+
+.index-cates {
+  color: rgb(246, 247, 248) !important;
+}
+
+.index-cates li {
+  background: rgb(69, 75, 98) !important;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !important;
+
+  a {
+    color: #eee !important;
+  }
+}
+
+.post_tags li a {
+  background-color: rgba(189, 202, 219, 0.32941176470588235) !important;
+  color: #eee !important;
+}
+
+.index-post-list {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px !important;
+  background: rgb(57, 68, 89) !important;
+}
+
+.list-show-btn {
+  color: rgb(46, 62, 96) !important;
+  background: #f6f7f8 !important;
+  opacity: 0.8 !important;
+}
+
+.article-list-item {
+  h5 {
+    color: #fff !important;
+  }
+
+  p {
+    color: rgb(203, 201, 201) !important;
+  }
+
+  a {
+    color: rgb(69, 197, 255);
+  }
+}
+
+.article-list-footer span,
+.article-list-footer a {
+  color: #eee !important;
+}
+
+.icp-div {
+  background: rgb(46, 62, 96) !important;
+
+  a {
+    text-decoration: none;
+    color: #848fa6;
+  }
+}
+
+.quick-form-textarea {
+  background: transparent;
+}
+
+.quick-form {
+  background: transparent;
+}
+
+.article {
+  background: rgb(57, 68, 89) !important;
+}
+
+.single-h2 {
+  color: #fff !important;
+}
+
+.article-list-footer span,
+.article-list-footer a {
+  color: #eee !important;
+}
+
+.article-content {
+  color: #fff !important;
+}
+
+.comment .fn {
+  color: #fff !important;
+}
+
+.comment-body p {
+  color: #fff !important;
+}
+
+.comment-notes {
+  color: #fff !important;
+}
+
+#comment,
+.comment-form input[type=text] {
+  border-radius: 3px !important;
+  background-color: rgb(123, 133, 152) !important;
+  border: 1px solid #eee !important;
+  font-size: 14px !important;
+}
+
+#submit {
+  background-color: #7b8597 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.index-div-next {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px !important;
+  background: #394458 !important;
+}
+
+.index-div-next h4 {
+  color: #fff !important;
+}
+
+.index-div-next p {
+  color: #777 !important;
+}
+
+.comment-reply-title,
+.comments-title {
+  color: #fff !important;
+}
+
+.comment-body .reply .comment-reply-link {
+  color: #fff !important;
+  background-color: #0084FF !important;
+}
+
+.index-div-next p a {
+  color: #fff !important;
+}
+
+.search-bg {
+  background: #555 !important;
+}
+
+.search-div1 h3 {
+  color: #fff !important;
+}
+
+.search-div1 p {
+  color: #999;
+}
+
+.search-div1 input {
+  background: #eee !important;
+}
+
+.search-div1 input {
+  background: #eee !important;
+}
+
+.search-div2 li {
+  background: #eee !important;
+  border: none !important;
+}
+
+.archive-h2 {
+  color: #fff !important;
+}
+
+.article-list-type1 {
+  background: #fff !important;
+}
+
+.notice-list div {
+  color: #fff !important;
+}
+
+.article-list-img {
+  opacity: .7 !important;
+}
+
+.header-div1-1 img {
+  border: none !important;
+  padding: 0px !important;
+}
+
+.index-div {
+  background: #394457 !important;
+
+  h4 {
+    color: #fff !important;
+  }
+}
+
+.index-ul .active {
+  background: #33528c !important;
+  border-left: 5px solid #1a4490 !important;
+}
+
+.index-ul li a {
+  color: #fff !important;
+}
+
+.article-content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  ol,
+  ul,
+  span {
+    color: #fff !important;
+  }
+
+  span {
+    span {
+      color: #fff !important;
+    }
+  }
+
+  li::before {
+    color: #fff !important;
+  }
+  
+}
+
+.warp-post-embed .embed-content h2 {
+  color: #fff !important;
+}
+
+.warp-post-embed .embed-content p {
+  color: #fff !important;
+}
+
+.warp-post-embed {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  background-image: none !important;
+}
+
+.index-ul li:hover {
+  background: #33528c !important;
+  border-left: 5px solid #1a4490 !important;
+}
+
+.article-list-type1 {
+  background: rgba(0, 132, 255, 0.32) !important;
+}
+
+.img-cate {
+  background: rgba(246, 247, 248, 0.27) !important;
+}
+
+.page-p {
+  color: #fff !important;
+}
+
+.gray-for-heroes {
+  background: #333 !important;
+
+  &:hover {
+    background: #333 !important;
+  }
+}
+
+.buy-list-item {
+  .buy-right-info {
+    h3{
+      color: #fff !important;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{{- $toc := .TableOfContents -}}
+
+{{/* Remove redundant tags */}}
+{{/* <nav> */}}
+{{- $regexPatternTOC := `<nav id="TableOfContents">` -}}
+{{- $regexReplacementTOC := `` -}}
+{{- $toc = $toc | replaceRE $regexPatternTOC $regexReplacementTOC -}}
+{{/* </nav> */}}
+{{- $regexPatternTOC := `</nav>` -}}
+{{- $regexReplacementTOC := `` -}}
+{{- $toc = $toc | replaceRE $regexPatternTOC $regexReplacementTOC -}}
+{{/* <ul> */}}
+{{- $regexPatternTOC := `<ul>` -}}
+{{- $regexReplacementTOC := `` -}}
+{{- $toc = $toc | replaceRE $regexPatternTOC $regexReplacementTOC -}}
+{{/* </ul> */}}
+{{- $regexPatternTOC := `</ul>` -}}
+{{- $regexReplacementTOC := `` -}}
+{{- $toc = $toc | replaceRE $regexPatternTOC $regexReplacementTOC -}}
+{{/* <li></li> */}}
+{{- $regexPatternTOC := `<li></li>` -}}
+{{- $regexReplacementTOC := `` -}}
+{{- $toc = $toc | replaceRE $regexPatternTOC $regexReplacementTOC -}}
+
+{{- $toc | safeHTML -}}

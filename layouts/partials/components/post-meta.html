@@ -1,0 +1,53 @@
+{{/* Post Meta */}}
+<div class="article-header">
+  <span class="badge badge-pill badge-danger single-badge">
+    <a href="{{ "/" | relURL }}" style="text-decoration:none">
+      <i class="ri-article-line"></i>
+      {{ T "postDes" }}
+    </a>
+  </span>
+  {{/* Categories */}}
+  {{ if .Params.categories }}
+    {{ with .Params.categories }}
+      {{ range . }}
+        {{ $cate := . }}
+        {{ $path := (urls.Parse ($cate | urlize)).Path }}
+        {{ with $.Site.GetPage (printf `/categories/%s` $path) }}
+          <span class="badge badge-pill badge-danger single-badge">
+            <a href="{{ .RelPermalink }}" class="post-header">{{ .LinkTitle | default $path }}</a>
+          </span>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Reading Time */}}
+  <span
+    class="badge badge-pill badge-danger single-badge"
+    style="margin-left: 10px;"
+    title="{{ T "postEstimate" }}"
+  >
+    <a
+      class="post-header"
+    >{{ .ReadingTime }} mins</a>
+  </span>
+
+  {{/* Title */}}
+  <h2 class="single-h2">{{ .Title }}</h2>
+
+  {{/* Bottom Info */}}
+  <div class="article-list-footer">
+    <span class="article-list-date">{{ .Date.Format "02-01-06" }}</span>
+    {{/* TODO: Views */}}
+    {{/* 
+      <span class="article-list-divider">/</span>
+      <span class="article-list-minutes">{{ posts.post_metas.views }}&nbsp;Views</span>
+    */}}
+    <span class="article-list-divider">/</span>
+    <span
+      class="article-list-minutes"
+    >{{ .WordCount }} &nbsp;Words</span>
+  </div>
+
+  <div class="single-line"></div>
+</div>

@@ -1,0 +1,55 @@
+<div id="header_info" class="index-top">
+  {{/* Author Info 作者信息 */}}
+  <nav class="header-nav reveal">
+    <img class="header-avatar-top" src="{{ .Site.Author.avatar | relURL }}" />
+    <a style="text-decoration:none;" href="{{ "/" | relURL }}" class="header-logo" title="TonyHe">{{ .Site.Author.name }}</a>
+    <p class="lead" style="margin-top: 0px;margin-left:5px">{{ .Site.Author.motto }}</p>
+  </nav>
+  {{/* Home Top Categories 首页置顶分类 */}}
+  <div class="index-cates">
+    {{ range .Site.Params.top }}
+      <li class="cat-item cat-item-4 cat-real" style="display: inline-block;">
+        <a href="{{ .link }}" title="{{ .describe }}">
+          <div class="header-item-icon-div">
+            <i class="{{ .icon }}"></i>
+          </div>
+          {{ .name }}
+        </a>
+      </li>
+    {{ end }}
+  </div>
+  {{/* Tags 标签 */}}
+  <div class="tags-div">
+    {{/* Scroll Left 滑动左侧 */}}
+    <a
+      v-if="translateX > 0"
+      class="tags-scroll-right scroll-left"
+      id="tags-scroll-left"
+    >
+      <i class="ri-arrow-left-line"></i>
+    </a>
+
+    {{/* Tags 标签 */}}
+    <ul
+      class="post_tags"
+      id="post-tags"
+    >
+      {{ range .Site.Taxonomies.tags }}
+        {{ with .Page }}
+          <li class="cat-real">
+            <a href="{{ .Permalink }}">#{{ .Title }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+
+    {{/* Scroll Right 滑动右侧 */}}
+    <a
+      v-if="!loading_tages"
+      class="tags-scroll-right"
+      id="tags-scroll-right"
+    >
+      <i class="ri-arrow-right-line"></i>
+  </a>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{{/* By [@reuixiy](https://github.com/reuixiy/) https://github.com/reuixiy/hugo-theme-meme/blob/master/layouts/partials/utils/summary.html */}}
+{{ $summary := .Summary }}
+{{ if .Truncated }}
+    <!-- For the CJK language, add ellipsis. -->
+    {{ if .Params.isCJKLanguage }}
+        {{ $summary = printf `%s%s` .Summary (i18n "ellipsis") | safeHTML }}
+    <!-- For the other languages, no need. -->
+    <!-- Hugo’s automatic summary split method will split until end of sentence. -->
+    <!-- (Tested English Only) -->
+    {{ end }}
+{{ end }}
+{{ return $summary }}
