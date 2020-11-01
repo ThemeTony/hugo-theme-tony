@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "bungcip.better-toml",
+        "budparr.language-hugo-vscode",
+        "formulahendry.auto-rename-tag"
+    ],
+    "unwantedRecommendations": [
+        "rusnasonov.vscode-hugo",
+        "eliostruyf.vscode-hugo-themer"
+    ]
+}
