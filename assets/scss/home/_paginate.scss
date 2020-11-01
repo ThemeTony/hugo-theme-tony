@@ -1,0 +1,21 @@
+@mixin paginate($float) {
+  width: 50%;
+  padding: 0 30px 75px;
+  float: $float;
+  button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+$prefix: "paginate";
+.#{$prefix} {
+  a {
+    text-decoration: none;
+  }
+  &-prev {
+    @include paginate(left);
+  }
+  &-next {
+    @include paginate(right);
+  }
+}

@@ -1,0 +1,8 @@
+<script src="
+  {{- if .Site.Params.useCDN -}}
+    //cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js
+  {{- else -}}
+    {{- "js/highlight.min.js" | relURL -}}
+  {{- end -}}
+"></script>
+<script>hljs.initHighlightingOnLoad();</script>

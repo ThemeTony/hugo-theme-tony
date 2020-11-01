@@ -4,9 +4,8 @@
       <div
         class="single-left"
       >
-        {{ if findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
-          {{ partial "components/post-toc" . }}
-        {{ end }}
+        {{ partial "components/post-toc" . }}
+        {{ partial "components/post-nav" . }}
       </div>
       {{/* Reading Bar */}}
       <div class="reading-bar"></div>
@@ -27,3 +26,4 @@
     </div>
   </div>
 </div>
+{{ partial "third-party/highlightjs" . }}

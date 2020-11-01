@@ -22,6 +22,10 @@
             {{ end }}
           </li>
         {{ end }}
+        {{/* Paginate 导航 */}}
+        {{ if or $paginator.HasPrev $paginator.HasNext }}
+          {{ partial "components/home-paginate" (dict "$" . "paginator" $paginator) }}
+        {{ end }}
       </ul>
     </div>
   </div>

@@ -1,3 +1,4 @@
+// @ts-check
 window.addEventListener("DOMContentLoaded", event => {
   var backToTop = document.getElementById('go-top-button');
   var getCurrentScrollTop = function () {
@@ -23,7 +24,7 @@ window.addEventListener("DOMContentLoaded", event => {
   }
   backToTop.addEventListener("click", function () {
     var initialSpeed = 70;
-    timerID = setInterval(function() {
+    var timerID = setInterval(function() {
         window.scrollBy(0, -initialSpeed);
         initialSpeed = initialSpeed + 8;
         if (getCurrentScrollTop() === 0){

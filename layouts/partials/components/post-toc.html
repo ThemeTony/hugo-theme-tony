@@ -1,11 +1,13 @@
-<div class="index-div">
-  <div class="single-index">
-    <h4>
-      <i class="ri-list-check-2"></i>
-      {{ T "postToc" }}
-    </h4>
+{{ if .Params.toc | default .Site.Params.post.enableTOC | default (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content) }}
+  <div class="index-div">
+    <div class="single-index">
+      <h4>
+        <i class="ri-list-check-2"></i>
+        {{ T "postToc" }}
+      </h4>
+    </div>
+    <ul id="article-index" class="index-ul">
+      {{ partial "utils/toc" . }}
+    </ul>
   </div>
-  <ul id="article-index" class="index-ul">
-    {{ partial "utils/toc" . }}
-  </ul>
-</div>
+{{ end }}

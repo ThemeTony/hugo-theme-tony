@@ -1,10 +1,10 @@
 {{/* Back To Top */}}
-{{ if .Site.Params.enableBackToTop }}
+{{ if .Site.Params.footer.enableBackToTop }}
   {{ partial "components/go-to-top" . }}
 {{ end }}
 
 {{/* Github Link GitHub链接 */}}
-{{ if .Site.Params.enableFooterGithubLink }}
+{{ if .Site.Params.footer.enableFooterGithubLink }}
   {{ partial "components/github-link" . }}
 {{ end }}
 
@@ -19,3 +19,6 @@
     {{ end }}
   </p>
 </div>
+
+{{/* Highlight.js */}}
+{{ partial "third-party/highlightjs" . }}

@@ -1,3 +1,4 @@
+// @ts-check
 window.addEventListener("DOMContentLoaded", function () {
   var translateX = 0;
   var list = document.getElementById('post-tags');

@@ -20,3 +20,13 @@
   other = "状态"
 [noneStatus]
   other = "无状态"
+[postedOn]
+  other = "发布于: "
+[prevPost]
+  other = "上一篇"
+[nextPost]
+  other = "下一篇"
+[prevPage]
+  other = "上一页"
+[nextPage]
+  other = "下一页"

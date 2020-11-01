@@ -1,0 +1,28 @@
+{{- $ := index . "$" -}}
+{{- $paginator := index . "paginator" -}}
+<div class="paginate">
+  {{ if $paginator.HasPrev }}
+    <div class="paginate-prev">
+      <a
+        href="{{ $paginator.Prev.URL }}"
+        rel="prev"
+      >
+        <button
+          class="btn btn-light bg-white border"
+        >{{ T "prevPage" }}</button>
+      </a>
+    </div>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+    <div class="paginate-next">
+      <a
+        href="{{ $paginator.Next.URL }}"
+        rel="next"
+      >
+        <button
+          class="btn btn-light bg-white border"
+        >{{ T "nextPage" }}</button>
+      </a>
+    </div>
+  {{ end }}
+</div>

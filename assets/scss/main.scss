@@ -10,7 +10,9 @@
 
 @import "header/nav";
 
-{{ if .Site.Params.enableBackToTop }}
+@import "home/paginate";
+
+{{ if .Site.Params.footer.enableBackToTop }}
   @import "footer/go-to-top";
 {{ end }}
 

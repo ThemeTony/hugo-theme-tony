@@ -1,0 +1,41 @@
+{{ if and .Site.Params.post.enablePostNav (in .Site.Params.mainSections .Section) }}
+  {{ if .Site.Params.post.postNavInSection }}
+    {{ .Scratch.Set "prev" .PrevInSection }}
+    {{ .Scratch.Set "next" .NextInSection }}
+  {{ else }}
+    {{ .Scratch.Set "prev" .PrevPage }}
+    {{ .Scratch.Set "next" .NextPage }}
+  {{ end }}
+  {{ $prev := .Scratch.Get "prev" }}
+  {{ $next := .Scratch.Get "next" }}
+  {{ if or $prev $next }}
+    <div>
+      {{ if $prev }}
+        <div class="index-div-next">
+          <h4>
+            <i class="czs-hande-vertical"></i>
+            {{ T "prevPost" }}
+          </h4>
+          <p>
+            <a href="{{ $prev.RelPermalink }}">
+              {{ (partial "utils/title.html" (dict "$" $prev "title" $prev.LinkTitle)).htmlTitle }}
+            </a>
+          </p>
+        </div>
+      {{ end }}
+      {{ if $next }}
+        <div class="index-div-next">
+          <h4>
+            <i class="czs-hande-vertical"></i>
+            {{ T "nextPost" }}
+          </h4>
+          <p>
+            <a href="{{ $next.RelPermalink }}">
+              {{ (partial "utils/title.html" (dict "$" $next "title" $next.LinkTitle)).htmlTitle }}
+            </a>
+          </p>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}

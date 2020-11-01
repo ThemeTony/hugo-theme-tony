@@ -6,6 +6,7 @@ keywords: []
 categories: []
 tags: []
 comments: true
+toc: true
 postImg: ""
 buy: false
 buyLink: ""

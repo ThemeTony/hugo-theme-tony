@@ -1,0 +1,15 @@
+{{ $path := .Get 0 }}
+{{ $page := .Site.GetPage $path }}
+{{ with $page }}
+  <div class="warp-post-embed">
+    <a style="text-decoration: none;" href="{{ .RelPermalink }}" target="_blank">
+      <div class="embed-content">
+        <h2>{{ .Title }}</h2>
+        <p>
+          <b>Slug: {{ $path }}</b>
+          &nbsp;&nbsp;{{ T "postedOn" }}{{ .Date.Format "2006-01-02 15:04:05" }}
+        </p>
+      </div>
+    </a>
+  </div>
+{{ end }}

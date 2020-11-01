@@ -1,0 +1,32 @@
+[postDes]
+  other = "Article"
+[postEstimate]
+  other = "ETA"
+[postTags]
+  other = "Tags"
+[postToc]
+  other = "Article citation"
+[atTop]
+  other = "Pinned"
+[noneTag]
+  other = "NaN"
+[404]
+  other = "404 Not found"
+[back2home]
+  other = "Back to home"
+[articleList]
+  other = "Article list"
+[status]
+  other = "Status"
+[noneStatus]
+  other = "No status"
+[postedOn]
+  other = "Posted on"
+[prevPost]
+  other = "Previous"
+[nextPost]
+  other = "Next"
+[prevPage]
+  other = "Previous Page"
+[nextPage]
+  other = "Next Page"
