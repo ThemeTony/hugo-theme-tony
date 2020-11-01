@@ -1,0 +1,145 @@
+##########################################
+# Site Config
+baseURL = "https://example.com"
+title = "Hugo Theme Tony"
+copyright = "GPL-3.0"
+paginate = 3
+languageCode = "en"
+enableInlineShortcodes = true
+
+# Theme
+theme = "tony"
+
+# i18n
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# Summary Length
+summaryLength = 80
+
+[author]
+  name = "ThemeTony"
+  avatar = "/t.jpg"
+  motto = "Just A Poor Lifesinger"
+
+##########################################
+# Menu Settings
+
+# Tony supports the following four menus:
+# 1. content    Left menu
+# 2. index      Right menu
+
+# The configuration instructions in the
+# menu are as follows:
+# url           URL
+# name          Text (won’t display if it
+#               is left empty("") or does
+#               not exist)
+# weight        Position
+# pre           Type of link (internal or
+#               external)
+# post          Icon (won’t display if it
+#               is left empty("") or does
+#               not exist)
+
+[menu]
+  [[menu.index]]
+    post = "ri-user-line"
+    name = "About"
+    pre = "internal"
+    url = "/about/"
+    weight = 10
+
+# URL
+[permalinks]
+  categories = "/categories/:slug/"
+  tags = "/tags/:slug/"
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Markdown renderer
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = false
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+  [markup.highlight]
+    codeFences = false
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+    style = ""
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+
+[params]
+  #######################################
+  # Site
+
+  # Most relevant pages
+  mainSections = ["post", "status"]
+  # Insert hash value in static file
+  enableFingerprint = true
+  # Use CDN
+  useCDN = false
+  # Display Copyright
+  displayCopyright = true
+
+#######################################
+# Post
+[params.post]
+  # Table of Contents
+  enableTOC = true
+  #####################################
+  # Post Nav
+  # Previous/Next Post
+  enablePostNav = true
+  # Apply to posts that below the same
+  # top level section only?
+  postNavInSection = true
+
+#######################################
+# Footer
+[params.footer]
+  # Bottom Left Github Link
+  enableFooterGithubLink = true
+  footerGithubPath = "ThemeTony"
+
+  # Back To Top Button
+  enableBackToTop = true
+
+#######################################
+# Home Top Categories
+[[params.top]]
+  name = "Github"
+  icon = "ri-github-line"
+  describe = "Hello world!"
+  link = "//github.com"
+
+#########################################
+# Info:
+# Icon: https://remixicon.com
