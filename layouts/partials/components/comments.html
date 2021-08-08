@@ -7,6 +7,11 @@
                 <div id="vcomments"></div>
                 {{ partial "third-party/valine.html" . }}
             {{ end }}
+            
+            {{ if .Site.Params.enableWaline }}
+                <div id="waline"></div>
+                {{ partial "third-party/waline.html" . }}
+            {{ end }}
 
         </div>
     {{ end }}

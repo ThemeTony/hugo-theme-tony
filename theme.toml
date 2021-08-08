@@ -4,7 +4,7 @@ licenselink = "https://github.com/ThemeTony/hugo-theme-tony/blob/master/LICENSE"
 description = "An Elegant Hugo Theme Based on WordPress Theme Tony"
 homepage = "https://htony.js.org"
 tags = ["simple", "Elegant", "transportation", "porting"]
-features = ["medium-zoom", "social icon", "thumbnail", "Valine","highlight.js","Google Analytics","Archives Page","JQuery"]
+features = ["medium-zoom", "social icon", "thumbnail", "Valine","highlight.js","Google Analytics","Archives Page"]
 min_version = "0.59.1"
 
 # If the theme has a single author
@@ -14,6 +14,6 @@ min_version = "0.59.1"
 
 # If porting an existing theme
 [original]
-    author = "TonyHe"
+    author = "HelipengTony"
     homepage = "https://www.ouorz.com"
-    repo = "https://github.com/ThemeTony/tony_wordpress/"
+    repo = "https://github.com/HelipengTony/antony/"
