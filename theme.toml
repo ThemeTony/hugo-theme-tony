@@ -9,8 +9,8 @@ min_version = "0.59.1"
 
 # If the theme has a single author
 [author]
-    name = "Ray"
-    homepage = "https://www.raycoder.me"
+    name = "Ray (so1ve)"
+    homepage = "https://github.com/so1ve"
 
 # If porting an existing theme
 [original]
